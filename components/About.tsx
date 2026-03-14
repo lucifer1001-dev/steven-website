@@ -25,6 +25,46 @@ export default function About() {
               Strong track record solving rendering performance bottlenecks, designing scalable frontend architectures, and delivering
               modern data-heavy web applications that make complex AI and analytics workflows intuitive for end users.
             </p>
+
+            <div className="mt-10 pt-8 border-t border-primary-500/20">
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Education
+              </h3>
+
+              <div className="space-y-4">
+                <div className="rounded-xl border border-primary-500/25 bg-dark-900/40 p-5">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                    <div>
+                      <p className="text-lg font-semibold text-primary-300">
+                        Portland State University
+                      </p>
+                      <p className="text-gray-200">
+                        Master of Science — Computer Science
+                      </p>
+                    </div>
+                    <p className="text-sm text-primary-200/90 md:text-right whitespace-nowrap">
+                      05/2014 – 09/2015
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-primary-500/25 bg-dark-900/40 p-5">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                    <div>
+                      <p className="text-lg font-semibold text-primary-300">
+                        The Evergreen State College
+                      </p>
+                      <p className="text-gray-200">
+                        Bachelor of Arts — Media Communications
+                      </p>
+                    </div>
+                    <p className="text-sm text-primary-200/90 md:text-right whitespace-nowrap">
+                      05/2007 – 09/2011
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
