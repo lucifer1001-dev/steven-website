@@ -1,70 +1,73 @@
 const skillCategories = [
   {
-    title: 'Frontend',
+    title: 'Frontend & Architecture',
     skills: [
       'React',
       'Next.js',
       'TypeScript',
       'JavaScript (ES6+)',
-      'Redux',
+      'SPA',
+      'SSR',
+      'ISR',
+      'Micro-frontends',
+      'Component systems',
+    ],
+  },
+  {
+    title: 'AI & Data Systems',
+    skills: [
+      'LLM-integrated UX',
+      'RAG-style search',
+      'Chat-based interfaces',
+      'Agent workflows',
+      'ML-driven UI',
+      'Explainable AI',
+    ],
+  },
+  {
+    title: 'Data & State',
+    skills: [
       'React Query',
+      'Server/client state architecture',
+    ],
+  },
+  {
+    title: 'Observability & Tooling',
+    skills: [
+      'Sentry',
+      'Datadog',
+      'Webpack',
+      'Vite',
+      'Chrome DevTools',
+    ],
+  },
+  {
+    title: 'Performance & Rendering',
+    skills: [
+      'Core Web Vitals',
+      'Virtualization',
+      'Progressive hydration',
+      'Streaming UI',
+      'Rendering optimization',
+    ],
+  },
+  {
+    title: 'Backend & APIs',
+    skills: [
+      'Node.js',
+      'Python',
+      'REST APIs',
       'GraphQL',
     ],
   },
   {
-    title: 'Architecture & Performance',
+    title: 'Infrastructure',
     skills: [
-      'Frontend architecture',
-      'Design systems',
-      'Micro-frontends',
-      'SPA architecture',
-      'Web performance optimization',
-      'Rendering optimization',
-      'Handling large client-side datasets',
-      'Accessibility (WCAG)',
-    ],
-  },
-  {
-    title: 'Complex Product Interfaces',
-    skills: [
-      'Collaborative editors',
-      'Analytics dashboards',
-      'Data visualization systems',
-      'Real-time user interfaces',
-      'Interactive image visualization',
-    ],
-  },
-  {
-    title: 'AI & Data Applications',
-    skills: [
-      'Machine learning visualization tools',
-      'AI-assisted interfaces',
-      'Computer vision datasets',
-      'Metadata-driven exploration',
-    ],
-  },
-  {
-    title: 'Backend Collaboration',
-    skills: [
-      'Node.js',
-      'Python',
-      'FastAPI',
-      'Flask',
-      'REST APIs',
-      'GraphQL APIs',
-    ],
-  },
-  {
-    title: 'Infrastructure & Observability',
-    skills: [
-      'PostgreSQL',
-      'Redis',
-      'MongoDB',
       'AWS (EC2, S3, Lambda)',
+      'Edge architectures',
+      'CDN optimization',
       'Docker',
-      'CI/CD pipelines',
-      'Datadog',
-      'Sentry',
+      'CI/CD',
     ],
   },
 ]
@@ -83,7 +86,7 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <div
               key={category.title}
-              className="glass-strong rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-primary-500/20 hover:border-primary-500/40 hover:scale-105 animate-fade-in-up"
+              className="glass-strong rounded-xl p-6 shadow-lg transition-all duration-300 border border-white/10 hover:border-primary-300/35 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-xl font-semibold text-primary-300 mb-4 flex items-center">
@@ -94,10 +97,10 @@ export default function Skills() {
                 {category.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="text-gray-300 flex items-center hover:text-primary-400 transition-all duration-200 group"
+                    className="text-slate-300 flex items-center hover:text-primary-300 transition-colors duration-200"
                   >
-                    <span className="w-2 h-2 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mr-3 flex-shrink-0 group-hover:scale-150 transition-transform"></span>
-                    <span className="group-hover:translate-x-1 transition-transform">{skill}</span>
+                    <span className="w-2 h-2 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mr-3 flex-shrink-0"></span>
+                    <span>{skill}</span>
                   </li>
                 ))}
               </ul>

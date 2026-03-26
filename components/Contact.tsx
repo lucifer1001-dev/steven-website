@@ -60,10 +60,10 @@ export default function Contact() {
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center animate-fade-in-down">
           <span className="gradient-text">Get In Touch</span>
         </h2>
-        <p className="text-lg text-gray-400 mb-12 text-center animate-fade-in-up">
+        <p className="text-lg text-slate-300 mb-12 text-center animate-fade-in-up">
           I&apos;m always open to discussing new opportunities and interesting projects.
         </p>
-        <div className="glass-strong rounded-2xl p-6 md:p-8 mb-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 animate-fade-in-up relative z-[1]">
+        <div className="glass-strong rounded-2xl p-6 md:p-8 mb-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 animate-fade-in-up relative z-[1] shadow-lg border border-white/10">
           <div>
             <p className="text-sm uppercase tracking-wide text-primary-300 mb-1">
               Email
@@ -96,7 +96,7 @@ export default function Contact() {
           </div>
         </div>
         
-        <form onSubmit={handleSubmit} className="glass-strong rounded-2xl shadow-2xl p-8 md:p-12 space-y-6 animate-scale-in relative z-[1]">
+        <form onSubmit={handleSubmit} className="glass-strong rounded-2xl shadow-lg p-8 md:p-12 space-y-6 animate-scale-in relative z-[1] border border-white/10">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-primary-300 mb-2">
               Name
@@ -163,7 +163,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold hover:from-primary-500 hover:to-primary-400 transition-all duration-300 shadow-lg shadow-primary-500/50 hover:shadow-xl hover:shadow-primary-500/60 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+            className="w-full px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold hover:from-primary-500 hover:to-primary-400 transition-all duration-300 shadow-md shadow-primary-500/30 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>

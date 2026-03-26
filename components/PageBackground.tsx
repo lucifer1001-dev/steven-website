@@ -37,13 +37,13 @@ export default function PageBackground({ variant }: Props) {
       const h = window.innerHeight
 
       ctx.clearRect(0, 0, w, h)
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.2)'
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.14)'
       ctx.fillRect(0, 0, w, h)
 
       const blobs = [
-        { x: 0.18, y: 0.24, r: 0.34, sx: 0.25, sy: 0.2, c: 'rgba(59, 130, 246, 0.22)' },
-        { x: 0.78, y: 0.66, r: 0.3, sx: 0.22, sy: 0.24, c: 'rgba(14, 165, 233, 0.2)' },
-        { x: 0.48, y: 0.48, r: 0.26, sx: 0.18, sy: 0.16, c: 'rgba(56, 189, 248, 0.14)' },
+        { x: 0.18, y: 0.24, r: 0.34, sx: 0.25, sy: 0.2, c: 'rgba(59, 130, 246, 0.16)' },
+        { x: 0.78, y: 0.66, r: 0.3, sx: 0.22, sy: 0.24, c: 'rgba(14, 165, 233, 0.14)' },
+        { x: 0.48, y: 0.48, r: 0.26, sx: 0.18, sy: 0.16, c: 'rgba(56, 189, 248, 0.1)' },
       ]
 
       for (const b of blobs) {
@@ -76,10 +76,10 @@ export default function PageBackground({ variant }: Props) {
       const grid = 52
 
       ctx.clearRect(0, 0, w, h)
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.2)'
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.14)'
       ctx.fillRect(0, 0, w, h)
 
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.12)'
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.09)'
       ctx.lineWidth = 0.7
 
       for (let x = 0; x < w + grid; x += grid) {
@@ -101,7 +101,7 @@ export default function PageBackground({ variant }: Props) {
       for (let x = 0; x < w + grid; x += grid * 2) {
         for (let y = 0; y < h + grid; y += grid * 2) {
           const p = Math.sin(time * 2.2 + x * 0.02 + y * 0.02) * 0.5 + 0.5
-          ctx.fillStyle = `rgba(186, 230, 253, ${0.08 + p * 0.22})`
+          ctx.fillStyle = `rgba(186, 230, 253, ${0.06 + p * 0.16})`
           ctx.beginPath()
           ctx.arc(x, y, 1 + p * 1.2, 0, Math.PI * 2)
           ctx.fill()
@@ -111,7 +111,7 @@ export default function PageBackground({ variant }: Props) {
       const scanY = (time * 34) % (h + 120) - 60
       const scan = ctx.createLinearGradient(0, scanY - 28, 0, scanY + 28)
       scan.addColorStop(0, 'rgba(14, 165, 233, 0)')
-      scan.addColorStop(0.5, 'rgba(14, 165, 233, 0.12)')
+      scan.addColorStop(0.5, 'rgba(14, 165, 233, 0.08)')
       scan.addColorStop(1, 'rgba(14, 165, 233, 0)')
       ctx.fillStyle = scan
       ctx.fillRect(0, scanY - 28, w, 56)
@@ -123,14 +123,14 @@ export default function PageBackground({ variant }: Props) {
       const h = window.innerHeight
 
       ctx.clearRect(0, 0, w, h)
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.2)'
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.14)'
       ctx.fillRect(0, 0, w, h)
 
       const vy = h * 0.14
       const laneTilt = -h * 0.34
 
       // Lines collect toward the top band but keep fixed spacing (never meet).
-      ctx.strokeStyle = 'rgba(125, 211, 252, 0.08)'
+      ctx.strokeStyle = 'rgba(125, 211, 252, 0.06)'
       ctx.lineWidth = 0.9
       const guideCount = 12
       const bottomStep = w / guideCount
@@ -155,7 +155,7 @@ export default function PageBackground({ variant }: Props) {
         const halfWidth = (w * 0.52) * (1 - t * 0.7)
         const skew = laneTilt * 0.14
         const shift = Math.sin(time * 0.2 + i) * 14
-        ctx.strokeStyle = 'rgba(56, 189, 248, 0.07)'
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.05)'
         ctx.beginPath()
         ctx.moveTo(w * 0.5 - halfWidth + shift + skew, y)
         ctx.lineTo(w * 0.5 + halfWidth + shift - skew, y)
@@ -235,13 +235,13 @@ export default function PageBackground({ variant }: Props) {
         { label: 'Sentry', icon: 'infra' },
         { label: 'WCAG', icon: 'frontend' },
       ]
-      const lanes = [-0.36, -0.18, 0.02, 0.22, 0.4]
+      const lanes = [-0.38, -0.2, 0.06, 0.28]
       const seeded = (n: number) => {
         const x = Math.sin(n * 12.9898) * 43758.5453
         return x - Math.floor(x)
       }
       lanes.forEach((lane, laneIndex) => {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
           const seed = laneIndex * 10 + i + 1
           const startOffset = seeded(seed + 7)
           const speed = 0.05 + seeded(seed + 13) * 0.06
@@ -265,15 +265,25 @@ export default function PageBackground({ variant }: Props) {
           const cardX = x - cardW / 2
           const cardY = y - cardH / 2
 
+          // Keep the hero content area visually clean.
+          const isInHeroSafeZone =
+            cardX + cardW > w * 0.28 &&
+            cardX < w * 0.72 &&
+            cardY + cardH > h * 0.22 &&
+            cardY < h * 0.8
+          if (isInHeroSafeZone) {
+            continue
+          }
+
           const cardFill = ctx.createLinearGradient(cardX, cardY, cardX, cardY + cardH)
-          cardFill.addColorStop(0, `rgba(30, 64, 175, ${0.1 + perspective * 0.14})`)
-          cardFill.addColorStop(1, `rgba(14, 165, 233, ${0.08 + perspective * 0.1})`)
+          cardFill.addColorStop(0, `rgba(30, 64, 175, ${0.08 + perspective * 0.11})`)
+          cardFill.addColorStop(1, `rgba(14, 165, 233, ${0.06 + perspective * 0.08})`)
           ctx.fillStyle = cardFill
           roundedRect(cardX, cardY, cardW, cardH, 6)
           ctx.fill()
 
-          ctx.strokeStyle = `rgba(125, 211, 252, ${0.14 + perspective * 0.2})`
-          ctx.lineWidth = 0.8
+          ctx.strokeStyle = `rgba(125, 211, 252, ${0.1 + perspective * 0.14})`
+          ctx.lineWidth = 0.7
           roundedRect(cardX, cardY, cardW, cardH, 6)
           ctx.stroke()
 
@@ -283,8 +293,8 @@ export default function PageBackground({ variant }: Props) {
           const iconY = cardY + cardH / 2
 
           const iconBg = ctx.createLinearGradient(iconX - iconSize / 2, iconY - iconSize / 2, iconX + iconSize / 2, iconY + iconSize / 2)
-          iconBg.addColorStop(0, `rgba(30, 64, 175, ${0.22 + perspective * 0.2})`)
-          iconBg.addColorStop(1, `rgba(14, 165, 233, ${0.16 + perspective * 0.16})`)
+          iconBg.addColorStop(0, `rgba(30, 64, 175, ${0.16 + perspective * 0.16})`)
+          iconBg.addColorStop(1, `rgba(14, 165, 233, ${0.1 + perspective * 0.12})`)
           ctx.fillStyle = iconBg
           roundedRect(iconX - iconSize / 2, iconY - iconSize / 2, iconSize, iconSize, 4)
           ctx.fill()
@@ -292,7 +302,7 @@ export default function PageBackground({ variant }: Props) {
           drawCardIcon(iconX, iconY, iconSize, skill.icon)
 
           const fontSize = 9 + perspective * 5
-          ctx.fillStyle = `rgba(191, 219, 254, ${0.42 + perspective * 0.3})`
+          ctx.fillStyle = `rgba(191, 219, 254, ${0.32 + perspective * 0.24})`
           ctx.font = `${fontSize}px Inter, sans-serif`
           ctx.textBaseline = 'middle'
           ctx.fillText(skill.label, cardX + 18 + iconSize, cardY + cardH / 2)
@@ -301,7 +311,7 @@ export default function PageBackground({ variant }: Props) {
 
       // Soft spotlight around vanishing point.
       const spotlight = ctx.createRadialGradient(w * 0.5, h * 0.16, 0, w * 0.5, h * 0.16, 260)
-      spotlight.addColorStop(0, 'rgba(56, 189, 248, 0.12)')
+      spotlight.addColorStop(0, 'rgba(56, 189, 248, 0.08)')
       spotlight.addColorStop(1, 'rgba(56, 189, 248, 0)')
       ctx.fillStyle = spotlight
       ctx.fillRect(0, 0, w, h)
@@ -315,12 +325,12 @@ export default function PageBackground({ variant }: Props) {
       const oy = h * 0.78
 
       ctx.clearRect(0, 0, w, h)
-      ctx.fillStyle = 'rgba(2, 6, 23, 0.2)'
+      ctx.fillStyle = 'rgba(2, 6, 23, 0.14)'
       ctx.fillRect(0, 0, w, h)
 
       for (let i = 0; i < 4; i++) {
         const r = 120 + i * 88 + Math.sin(time * 0.9 + i) * 6
-        ctx.strokeStyle = `rgba(94, 234, 212, ${0.14 - i * 0.025})`
+        ctx.strokeStyle = `rgba(94, 234, 212, ${0.1 - i * 0.02})`
         ctx.lineWidth = 0.9
         ctx.beginPath()
         ctx.arc(ox, oy, r, 0, Math.PI * 2)
@@ -332,14 +342,14 @@ export default function PageBackground({ variant }: Props) {
         const rr = 100 + (i % 3) * 48
         const x = ox + Math.cos(a) * rr
         const y = oy + Math.sin(a) * rr
-        ctx.fillStyle = 'rgba(153, 246, 228, 0.24)'
+        ctx.fillStyle = 'rgba(153, 246, 228, 0.16)'
         ctx.beginPath()
         ctx.arc(x, y, 1.6, 0, Math.PI * 2)
         ctx.fill()
       }
 
       const g = ctx.createRadialGradient(ox, oy, 0, ox, oy, 340)
-      g.addColorStop(0, 'rgba(45, 212, 191, 0.1)')
+      g.addColorStop(0, 'rgba(45, 212, 191, 0.07)')
       g.addColorStop(1, 'rgba(15, 23, 42, 0)')
       ctx.fillStyle = g
       ctx.fillRect(0, 0, w, h)
@@ -353,7 +363,7 @@ export default function PageBackground({ variant }: Props) {
     }
 
     const tick = () => {
-      time += 0.012
+      time += 0.009
       drawByVariant()
       if (!prefersReducedMotion) {
         rafId = window.requestAnimationFrame(tick)

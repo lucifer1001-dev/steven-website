@@ -7,7 +7,7 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'Skills',
   description:
-    'Technical skills in React, TypeScript, frontend architecture, performance engineering, complex product interfaces, AI & data applications, backend collaboration, infrastructure, and observability.',
+    'Technical skills in frontend architecture, LLM-integrated UX, RAG-style search, agent workflows, rendering performance, observability tooling, APIs, and infrastructure.',
 }
 
 export default function SkillsPage() {

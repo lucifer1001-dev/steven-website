@@ -12,18 +12,16 @@ export default function About() {
           <div className="glass-strong rounded-2xl p-8 md:p-12 shadow-2xl animate-scale-in">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
               Senior Software Engineer with <span className="text-primary-400 font-semibold">10+ years of experience</span> building
-              high-performance web applications and complex browser-based products used by millions of users. Specialized in React,
-              TypeScript, and frontend performance optimization for data-intensive interfaces including collaborative editors,
-              analytics dashboards, and AI-driven visualization platforms.
+              high-performance, data-intensive applications, including AI-powered and real-time systems at scale.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Experienced translating large backend systems and machine learning pipelines into scalable user interfaces. Previously
-              contributed to frontend platforms at <span className="text-primary-400 font-semibold">Google</span> and <span className="text-primary-400 font-semibold">Canva</span>, improving performance, scalability,
-              and developer productivity across widely used product systems.
+              Specialized in designing AI-driven user experiences (LLM, search, and agent workflows) and frontend architecture
+              for large datasets (10k-1M+ records). Track record of improving performance (Core Web Vitals +30-50%),
+              accelerating user workflows, and delivering scalable platforms used by enterprise and consumer-scale users.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Strong track record solving rendering performance bottlenecks, designing scalable frontend architectures, and delivering
-              modern data-heavy web applications that make complex AI and analytics workflows intuitive for end users.
+              Experienced at driving architecture, influencing cross-team decisions, and translating complex ML systems
+              into intuitive, high-impact user experiences.
             </p>
 
             <div className="mt-10 pt-8 border-t border-primary-500/20">
@@ -48,21 +46,6 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="rounded-xl border border-primary-500/25 bg-dark-900/40 p-5">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                    <div>
-                      <p className="text-lg font-semibold text-primary-300">
-                        The Evergreen State College
-                      </p>
-                      <p className="text-gray-200">
-                        Bachelor of Arts — Media Communications
-                      </p>
-                    </div>
-                    <p className="text-sm text-primary-200/90 md:text-right whitespace-nowrap">
-                      05/2007 – 09/2011
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

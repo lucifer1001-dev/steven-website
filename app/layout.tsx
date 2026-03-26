@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Steven Chen'
   },
   description:
-    'Steven Chen is a Senior Software Engineer with 10+ years of experience building high-performance React and TypeScript applications, complex data-intensive interfaces, and AI-powered visualization platforms.',
+    'Steven Chen is a Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications, including AI-powered and real-time systems at scale.',
   keywords: [
     'Steven Chen',
     'Senior Software Engineer',
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     'Next.js',
     'Frontend Architecture',
     'Web Performance',
-    'Data Visualization',
-    'AI Interfaces',
-    'Analytics Dashboards',
-    'Collaborative Editors'
+    'LLM-integrated UX',
+    'RAG-style Search',
+    'Agent Workflows',
+    'Real-time Systems'
   ],
   authors: [{ name: 'Steven Chen' }],
   creator: 'Steven Chen',
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Software Engineer specializing in React, TypeScript, and high-performance, data-intensive web applications.',
+      'Senior Software Engineer specializing in AI-driven user experiences, large-scale frontend architecture, and high-performance data-intensive platforms.',
     siteName: 'Steven Chen Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Software Engineer specializing in React, TypeScript, and high-performance, data-intensive web applications.',
+      'Senior Software Engineer specializing in AI-driven user experiences, large-scale frontend architecture, and high-performance data-intensive platforms.',
   },
   robots: {
     index: true,
@@ -66,26 +66,22 @@ const jsonLd = {
   name: 'Steven Chen',
   jobTitle: 'Senior Software Engineer',
   description:
-    'Senior Software Engineer with 10+ years of experience building high-performance web applications, collaborative editors, analytics dashboards, and AI-driven visualization platforms.',
+    'Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications including AI-powered and real-time systems.',
   knowsAbout: [
     'React',
     'TypeScript',
     'Next.js',
     'Frontend Architecture',
     'Web Performance',
-    'Data Visualization',
-    'AI & Data Applications',
-    'Collaborative Editors',
-    'Analytics Dashboards'
+    'LLM-integrated UX',
+    'RAG-style search',
+    'Agent workflows',
+    'Performance engineering'
   ],
   alumniOf: [
     {
       '@type': 'Organization',
       name: 'Portland State University'
-    },
-    {
-      '@type': 'Organization',
-      name: 'The Evergreen State College'
     }
   ],
   worksFor: [

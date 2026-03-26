@@ -51,13 +51,13 @@ export default function Navigation() {
                 href={item.href}
                 className={`transition-all duration-300 font-medium relative group ${
                   pathname === item.href
-                    ? 'text-primary-400'
-                    : 'text-gray-300 hover:text-primary-400'
+                    ? 'text-primary-200'
+                    : 'text-slate-300 hover:text-primary-300'
                 }`}
               >
                 {item.label}
-                <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary-400 to-primary-600 transition-all duration-300 ${
-                  pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-300 to-primary-500 transition-all duration-300 ${
+                  pathname === item.href ? 'w-full opacity-100' : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
                 }`}></span>
               </Link>
             ))}

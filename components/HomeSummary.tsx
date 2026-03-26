@@ -4,21 +4,21 @@ const summaryData = {
   about: {
     title: 'About',
     description:
-      'Senior Software Engineer with 10+ years of experience building high-performance React and TypeScript applications, collaborative editors, analytics dashboards, and AI-driven visualization platforms.',
+      'Senior Software Engineer with 10+ years of experience building high-performance, data-intensive AI and real-time systems at scale.',
     highlight: '10+ Years Experience',
     link: '/about',
   },
   skills: {
     title: 'Technical Skills',
     description:
-      'Deep expertise in React, TypeScript, and frontend architecture with a focus on performance engineering, data-intensive interfaces, and AI & data applications.',
-    highlight: 'React • TypeScript • Frontend Architecture • Performance • AI & Data',
+      'Specialized in LLM-integrated UX, RAG-style search, agent workflows, and frontend architecture for large datasets from 10k to 1M+ records.',
+    highlight: 'React • Next.js • TypeScript • LLM UX • RAG Search • Agent Workflows',
     link: '/skills',
   },
   experience: {
     title: 'Professional Experience',
     description:
-      'Built AI-powered computer vision platforms at Restb.ai, collaborative design tools at Canva, enterprise analytics systems at Globant, and large-scale internal tools at Google.',
+      'Delivered AI-powered search and chat systems at Restb.ai, real-time editor systems at Canva, frontend modernization at Globant, and telemetry platforms at Google.',
     highlight: 'Restb.ai • Canva • Globant • Google',
     link: '/experience',
   },
@@ -35,7 +35,7 @@ export default function HomeSummary() {
           {Object.entries(summaryData).map(([key, data], index) => (
             <div
               key={key}
-              className="glass-strong rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border border-primary-500/20 hover:border-primary-500/40 hover:scale-105 animate-fade-in-up group"
+              className="glass-strong rounded-xl p-6 shadow-lg transition-all duration-300 border border-white/10 hover:border-primary-300/35 animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <h3 className="text-2xl font-bold text-primary-300 mb-3 flex items-center">
@@ -45,12 +45,12 @@ export default function HomeSummary() {
               <p className="text-primary-400 font-semibold mb-4 text-sm">
                 {data.highlight}
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-slate-300 mb-6 leading-relaxed">
                 {data.description}
               </p>
               <Link
                 href={data.link}
-                className="inline-flex items-center text-primary-400 hover:text-primary-300 font-semibold group-hover:translate-x-2 transition-transform duration-300"
+                className="inline-flex items-center text-primary-300 hover:text-primary-200 font-semibold transition-colors duration-300"
               >
                 Learn More
                 <svg

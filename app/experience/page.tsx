@@ -7,7 +7,7 @@ import HomeBackgroundEffect from '@/components/HomeBackgroundEffect'
 export const metadata: Metadata = {
   title: 'Experience',
   description:
-    'Professional experience at Restb.ai, Canva, Globant, and Google building AI-powered computer vision platforms, collaborative design tools, enterprise analytics systems, and large-scale internal tooling.',
+    'Professional experience at Restb.ai, Canva, Globant, and Google, delivering AI-powered search and chat workflows, real-time collaboration systems, and scalable telemetry platforms.',
 }
 
 export default function ExperiencePage() {

@@ -6,7 +6,7 @@ import PageBackground from '@/components/PageBackground'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact Steven Chen, Senior Software Engineer based in Vancouver, WA, to discuss new opportunities and interesting projects.',
+  description: 'Contact Steven Chen, Senior Software Engineer in Vancouver, WA, via email, phone, or stevenchen.life.',
 }
 
 export default function ContactPage() {

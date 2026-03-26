@@ -37,12 +37,12 @@ export default function HeroSection() {
             </span>
           </p>
           <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-3xl mx-auto animate-fade-in-up font-semibold drop-shadow-md" style={{ animationDelay: '0.4s' }}>
-            React • TypeScript • Frontend Architecture • Performance Engineering • AI & Data-Driven Interfaces
+            AI-Driven UX • LLM, Search & Agent Workflows • Large-Scale Frontend Architecture
           </p>
           <p className="text-base md:text-lg text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up drop-shadow-sm" style={{ animationDelay: '0.6s' }}>
-            Senior Software Engineer based in Vancouver, WA with 10+ years of experience building high-performance web
-            applications and complex browser-based products used by millions of users. Specialized in React, TypeScript,
-            and frontend performance optimization for collaborative editors, analytics dashboards, and AI-driven visualization platforms.
+            Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications,
+            including AI-powered and real-time systems at scale. Specialized in AI-driven user experiences and frontend
+            architecture for large datasets from 10k to 1M+ records.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <Link
