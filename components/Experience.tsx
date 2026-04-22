@@ -75,42 +75,33 @@ export default function Experience() {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center animate-fade-in-down">
           <span className="gradient-text">Professional Experience</span>
         </h2>
-        <div className="space-y-12">
+        <div className="space-y-6 md:space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="relative pl-8 border-l-2 border-primary-500/30 pb-12 last:pb-0 animate-fade-in-up"
+              className="relative animate-fade-in-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="absolute -left-2.5 top-0 w-5 h-5 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full ring-4 ring-dark-900 shadow-lg shadow-primary-500/50"></div>
-              <div className="glass-strong rounded-xl p-6 md:p-8 shadow-lg transition-all duration-300 border border-white/10 hover:border-primary-300/35">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              <div className="glass-strong rounded-2xl p-5 md:p-7 shadow-lg transition-all duration-300 border border-white/10 hover:border-primary-300/35 hover:shadow-primary-900/20">
+                <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary-400/90 via-primary-500/80 to-primary-700/70" />
+
+                <div className="pl-3 md:pl-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div className="min-w-0">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight">
                       {exp.company}
                     </h3>
-                    <p className="text-xl font-semibold gradient-text">
+                    <p className="text-lg md:text-xl font-semibold gradient-text">
                       {exp.role}
                     </p>
                   </div>
-                  <div className="text-right mt-2 md:mt-0">
-                    <p className="text-primary-300 font-medium text-lg">{exp.period}</p>
-                    <p className="text-gray-400">{exp.location}</p>
+
+                  <div className="flex flex-col items-start lg:items-end gap-2">
+                    <p className="text-primary-200 font-semibold text-lg whitespace-nowrap">{exp.period}</p>
+                    <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-slate-300">
+                      {exp.location}
+                    </span>
                   </div>
                 </div>
-                <ul className="space-y-4 mt-6">
-                  {exp.achievements.map((achievement, idx) => (
-                    <li
-                      key={idx}
-                      className="text-slate-300 flex items-start hover:text-slate-100 transition-colors duration-200 pl-2"
-                    >
-                      <div className="flex-shrink-0 mr-4 mt-1.5">
-                        <div className="w-2.5 h-2.5 rounded-full bg-gradient-to-br from-primary-400 via-primary-500 to-primary-600"></div>
-                      </div>
-                      <span className="flex-1 leading-relaxed text-base">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}
