@@ -7,14 +7,14 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Steven Chen | Senior Software Engineer',
+    default: 'Steven Chen | Staff Software Engineer',
     template: '%s | Steven Chen'
   },
   description:
-    'Steven Chen is a Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications, including AI-powered and real-time systems at scale.',
+    'Steven Chen is a Staff Software Engineer with 10+ years of experience building high-performance, data-intensive applications, including AI-powered and real-time systems at scale.',
   keywords: [
     'Steven Chen',
-    'Senior Software Engineer',
+    'Staff Software Engineer',
     'Frontend Engineer',
     'React Developer',
     'TypeScript',
@@ -32,16 +32,16 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    title: 'Steven Chen | Senior Software Engineer',
+    title: 'Steven Chen | Staff Software Engineer',
     description:
-      'Senior Software Engineer specializing in AI-driven user experiences, large-scale frontend architecture, and high-performance data-intensive platforms.',
+      'Staff Software Engineer specializing in AI-driven user experiences, large-scale frontend architecture, and high-performance data-intensive platforms.',
     siteName: 'Steven Chen Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Steven Chen | Senior Software Engineer',
+    title: 'Steven Chen | Staff Software Engineer',
     description:
-      'Senior Software Engineer specializing in AI-driven user experiences, large-scale frontend architecture, and high-performance data-intensive platforms.',
+      'Staff Software Engineer specializing in AI-driven user experiences, large-scale frontend architecture, and high-performance data-intensive platforms.',
   },
   robots: {
     index: true,
@@ -64,9 +64,9 @@ const jsonLd = {
   '@type': 'Person',
   url: SITE_URL,
   name: 'Steven Chen',
-  jobTitle: 'Senior Software Engineer',
+  jobTitle: 'Staff Software Engineer',
   description:
-    'Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications including AI-powered and real-time systems.',
+    'Staff Software Engineer with 10+ years of experience building high-performance, data-intensive applications including AI-powered and real-time systems.',
   knowsAbout: [
     'React',
     'TypeScript',

@@ -4,7 +4,7 @@ const summaryData = {
   about: {
     title: 'About',
     description:
-      'Senior Software Engineer with 10+ years of experience building high-performance, data-intensive AI and real-time systems at scale.',
+      'Staff Software Engineer with 10+ years of experience building high-performance, data-intensive AI and real-time systems at scale.',
     highlight: '10+ Years Experience',
     link: '/about',
   },
