@@ -1,7 +1,7 @@
 const experiences = [
   {
     company: 'Restb.ai',
-    role: 'Staff Software Engineer',
+    role: 'Senior Software Engineer',
     period: 'Feb 2023 – Present',
     location: 'Remote (US)',
     achievements: [

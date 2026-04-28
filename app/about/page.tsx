@@ -7,7 +7,7 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Steven Chen, a Staff Software Engineer with 10+ years of experience building high-performance, data-intensive AI and real-time systems at scale.',
+    'Learn about Steven Chen, a Senior Software Engineer with 10+ years of experience building high-performance, data-intensive AI and real-time systems at scale.',
 }
 
 export default function AboutPage() {

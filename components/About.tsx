@@ -11,7 +11,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
           <div className="glass-strong rounded-2xl p-8 md:p-12 shadow-2xl animate-scale-in">
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Staff Software Engineer with <span className="text-primary-400 font-semibold">10+ years of experience</span> building
+              Senior Software Engineer with <span className="text-primary-400 font-semibold">10+ years of experience</span> building
               high-performance, data-intensive applications, including AI-powered and real-time systems at scale.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">

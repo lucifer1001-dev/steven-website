@@ -33,14 +33,14 @@ export default function HeroSection() {
           <p className="text-xl md:text-2xl text-cyan-100 mb-4 font-semibold animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
             <span className="relative">
               <span className="absolute inset-0 blur-xl bg-cyan-200/20 -z-10"></span>
-              Staff Software Engineer · 10+ Years Experience
+              Senior Software Engineer · 10+ Years Experience
             </span>
           </p>
           <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-3xl mx-auto animate-fade-in-up font-semibold drop-shadow-md" style={{ animationDelay: '0.4s' }}>
             AI-Driven UX • LLM, Search & Agent Workflows • Large-Scale Frontend Architecture
           </p>
           <p className="text-base md:text-lg text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up drop-shadow-sm" style={{ animationDelay: '0.6s' }}>
-            Staff Software Engineer with 10+ years of experience building high-performance, data-intensive applications,
+            Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications,
             including AI-powered and real-time systems at scale. Specialized in AI-driven user experiences and frontend
             architecture for large datasets from 10k to 1M+ records.
           </p>
