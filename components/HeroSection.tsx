@@ -19,7 +19,7 @@ export default function HeroSection() {
                 alt="Steven Chen"
                 fill
                 sizes="192px"
-                className="object-cover object-[50%_50%]"
+                className="object-cover object-[50%_10%]"
                 priority
               />
             </div>
