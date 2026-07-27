@@ -1,4 +1,4 @@
-const FALLBACK_SITE_URL = 'https://yourportfolio.com'
+const FALLBACK_SITE_URL = 'https://stevenchen.life'
 
 function normalizeSiteUrl(url: string): string {
   return url.replace(/\/+$/, '')

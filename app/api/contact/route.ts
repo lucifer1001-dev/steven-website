@@ -4,7 +4,10 @@ type ContactPayload = {
   name?: string
   email?: string
   message?: string
+  company?: string
 }
+
+type DeliveryPayload = Required<Pick<ContactPayload, 'name' | 'email' | 'message'>>
 
 function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -14,7 +17,7 @@ function sanitize(value: string): string {
   return value.trim().replace(/\s+/g, ' ')
 }
 
-async function sendWithResend(payload: Required<ContactPayload>): Promise<void> {
+async function sendWithResend(payload: DeliveryPayload): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY
   const to = process.env.CONTACT_TO_EMAIL
   const from = process.env.CONTACT_FROM_EMAIL || 'onboarding@resend.dev'
@@ -44,7 +47,7 @@ async function sendWithResend(payload: Required<ContactPayload>): Promise<void> 
   }
 }
 
-async function sendWithWebhook(payload: Required<ContactPayload>): Promise<void> {
+async function sendWithWebhook(payload: DeliveryPayload): Promise<void> {
   const webhookUrl = process.env.CONTACT_WEBHOOK_URL
   if (!webhookUrl) {
     throw new Error('WEBHOOK_NOT_CONFIGURED')
@@ -65,6 +68,11 @@ async function sendWithWebhook(payload: Required<ContactPayload>): Promise<void>
 }
 
 export async function POST(request: Request) {
+  const contentLength = Number(request.headers.get('content-length') || 0)
+  if (contentLength > 12_000) {
+    return NextResponse.json({ error: 'Request is too large.' }, { status: 413 })
+  }
+
   let body: ContactPayload
 
   try {
@@ -77,12 +85,21 @@ export async function POST(request: Request) {
   const email = sanitize(body.email || '')
   const message = (body.message || '').trim()
 
+  // Honeypot field: bots commonly fill every available input.
+  if (body.company) {
+    return NextResponse.json({ ok: true })
+  }
+
   if (!name || !email || !message) {
     return NextResponse.json({ error: 'Name, email, and message are required.' }, { status: 400 })
   }
 
   if (!isValidEmail(email)) {
     return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
+  }
+
+  if (name.length > 100 || email.length > 254) {
+    return NextResponse.json({ error: 'Name or email is too long.' }, { status: 400 })
   }
 
   if (message.length < 10) {
@@ -109,13 +126,13 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          'Contact delivery is not configured yet. Set RESEND_API_KEY + CONTACT_TO_EMAIL or CONTACT_WEBHOOK_URL.',
+          'Contact delivery is temporarily unavailable. Please email me directly.',
       },
       { status: 503 }
     )
   } catch {
     return NextResponse.json(
-      { error: 'Unable to send message right now. Please email me directly at chenstevens890@gmail.com.' },
+      { error: 'Unable to send message right now. Please email me directly at chensteven890@outlook.com.' },
       { status: 500 }
     )
   }

@@ -1,114 +1,47 @@
-# Portfolio Website
+# Steven Blake Chen — Senior Frontend Engineer Portfolio
 
-A professional portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+A focused engineering portfolio built with Next.js, TypeScript, and Tailwind CSS. The site presents selected technical impact, professional experience, engineering capabilities, and a production-ready contact workflow.
 
-## Features
+## Highlights
 
-- 🚀 Built with Next.js (App Router) and TypeScript
-- 🎨 Modern, clean UI with Tailwind CSS
-- 📱 Fully responsive design
-- 🔍 SEO optimized with metadata and structured data
-- ♿ Accessibility focused
-- ⚡ Performance optimized
+- Responsive, accessible interface with reduced-motion support
+- Evidence-led case studies and accomplishment-focused career timeline
+- Route-specific metadata, canonical URLs, sitemap, robots, and Person structured data
+- Contact delivery through Resend or a generic webhook
+- TypeScript, ESLint, and production-build validation
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm, yarn, or pnpm
-
-### Installation
-
-1. Install dependencies:
+## Local development
 
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-2. Run the development server:
-
-```bash
+copy .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+The application runs at [http://localhost:3000](http://localhost:3000).
 
-4. Configure environment variables:
+## Environment
+
+Set `NEXT_PUBLIC_SITE_URL` to the deployed canonical origin.
+
+Configure one contact delivery option:
+
+- `RESEND_API_KEY` and `CONTACT_TO_EMAIL`; optionally set `CONTACT_FROM_EMAIL`
+- `CONTACT_WEBHOOK_URL`
+
+## Validation
 
 ```bash
-cp .env.example .env.local
-```
-
-Set at least:
-
-- `NEXT_PUBLIC_SITE_URL` for canonical URL, sitemap, and robots
-- One contact delivery option:
-  - `RESEND_API_KEY` + `CONTACT_TO_EMAIL` (optional `CONTACT_FROM_EMAIL`)
-  - or `CONTACT_WEBHOOK_URL`
-
-## Project Structure
-
-```
-.
-├── app/
-│   ├── layout.tsx      # Root layout with SEO metadata
-│   ├── page.tsx         # Home page
-│   └── globals.css      # Global styles
-├── components/
-│   ├── Navigation.tsx   # Navigation bar
-│   ├── Hero.tsx         # Hero section
-│   ├── About.tsx        # About section
-│   ├── Skills.tsx       # Skills section
-│   ├── Experience.tsx   # Experience section
-│   ├── Contact.tsx      # Contact form
-│   └── Footer.tsx       # Footer
-└── public/              # Static assets
-```
-
-## Customization
-
-### Personal Information
-
-Update the following files with your personal information:
-
-- `app/layout.tsx` - Update metadata (title, description, Open Graph, etc.)
-- `components/Hero.tsx` - Update hero section content
-- `components/About.tsx` - Update about section
-- `components/Experience.tsx` - Update experience data
-- `components/Skills.tsx` - Update skills data
-- `components/Contact.tsx` - Connect to your email service/API
-
-### SEO Configuration
-
-Update SEO metadata in `app/layout.tsx`:
-
-- Update `metadata.openGraph.url` with your domain
-- Add verification codes in `metadata.verification`
-- Update canonical URL in the `<head>` section
-
-### Styling
-
-The project uses Tailwind CSS. Customize colors and styles in:
-
-- `tailwind.config.ts` - Theme configuration
-- `app/globals.css` - Global styles and utilities
-
-## Build for Production
-
-```bash
+npm test
+npm run lint
 npm run build
-npm start
 ```
 
-## License
+`npm test` currently performs a strict TypeScript check. Add component and end-to-end tests as interactive behavior expands.
 
-MIT
+## Structure
+
+- `app/` — routes, metadata, SEO resources, and contact API
+- `components/` — page content, navigation, backgrounds, and shared presentation
+- `lib/` — canonical URL helpers
+- `public/` — static assets

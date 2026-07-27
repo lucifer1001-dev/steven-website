@@ -2,18 +2,19 @@ import type { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import Experience from '@/components/Experience'
-import HomeBackgroundEffect from '@/components/HomeBackgroundEffect'
+import PageBackground from '@/components/PageBackground'
 
 export const metadata: Metadata = {
   title: 'Experience',
   description:
-    'Professional experience at Restb.ai, Canva, Globant, and Google, delivering AI-powered search and chat workflows, real-time collaboration systems, and scalable telemetry platforms.',
+    'Senior frontend engineering experience at ZestyAI, Figma, Thoughtworks, and Facebook across React products, real-time collaboration, AI interfaces, and data visualization.',
+  alternates: { canonical: '/experience' },
 }
 
 export default function ExperiencePage() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
-      <HomeBackgroundEffect />
+    <main id="main-content" className="min-h-screen relative overflow-hidden">
+      <PageBackground variant="experience" />
       <div className="relative z-[1]">
         <Navigation />
         <Experience />

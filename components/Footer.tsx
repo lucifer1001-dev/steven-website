@@ -1,22 +1,12 @@
-export default function Footer() {
-  const currentYear = new Date().getFullYear()
+import Link from 'next/link'
 
+export default function Footer() {
   return (
-    <footer className="relative border-t border-primary-500/20 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="text-lg font-semibold gradient-text mb-4">
-            Steven Chen — Senior Software Engineer
-          </p>
-          <p className="text-sm text-gray-400 mb-6">
-            Building high-performance React and TypeScript applications, complex data-intensive interfaces, and AI-driven web experiences.
-          </p>
-          <div className="border-t border-primary-500/20 pt-6">
-            <p className="text-sm text-gray-500">
-              © {currentYear} All rights reserved.
-            </p>
-          </div>
-        </div>
+    <footer className="border-t border-white/10 py-10">
+      <div className="section-shell flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div><p className="font-semibold text-white">Steven Blake Chen</p><p className="mt-1 max-w-md text-sm text-slate-400">Senior software engineering for ambitious, data-intensive products.</p></div>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400"><Link href="/#projects" className="hover:text-cyan-200">Projects</Link><Link href="/experience" className="hover:text-cyan-200">Experience</Link><Link href="/resume" className="hover:text-cyan-200">Resume</Link><Link href="/contact" className="hover:text-cyan-200">Contact</Link></div>
+        <p className="text-xs text-slate-500">© {new Date().getFullYear()} Steven Blake Chen</p>
       </div>
     </footer>
   )

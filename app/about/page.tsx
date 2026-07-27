@@ -7,12 +7,13 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Steven Chen, a Senior Software Engineer with 10+ years of experience building high-performance, data-intensive AI and real-time systems at scale.',
+    'Learn about Steven Blake Chen, a Senior Frontend Engineer with 10+ years of experience in React architecture, real-time applications, and AI-powered product interfaces.',
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main id="main-content" className="min-h-screen relative overflow-hidden">
       <PageBackground variant="about" />
       <div className="relative z-[1]">
         <Navigation />

@@ -1,56 +1,18 @@
+const values = [
+  ['Architecture with context', 'The right solution accounts for the product, team, operating model, and expected rate of change—not only the code.'],
+  ['Performance as product quality', 'Latency, stability, accessibility, and clarity are part of the user experience and deserve measurable goals.'],
+  ['Multiplying the team', 'Strong technical direction creates shared language, reduces repeated decisions, and helps other engineers do their best work.'],
+]
+
 export default function About() {
   return (
-    <section
-      id="about"
-      className="py-20 relative pt-32"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center animate-fade-in-down">
-          <span className="gradient-text">About</span>
-        </h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="glass-strong rounded-2xl p-8 md:p-12 shadow-2xl animate-scale-in">
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Senior Software Engineer with <span className="text-primary-400 font-semibold">10+ years of experience</span> building
-              high-performance, data-intensive applications, including AI-powered and real-time systems at scale.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Specialized in designing AI-driven user experiences (LLM, search, and agent workflows) and frontend architecture
-              for large datasets (10k-1M+ records). Track record of improving performance (Core Web Vitals +30-50%),
-              accelerating user workflows, and delivering scalable platforms used by enterprise and consumer-scale users.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Experienced at driving architecture, influencing cross-team decisions, and translating complex ML systems
-              into intuitive, high-impact user experiences.
-            </p>
-
-            <div className="mt-10 pt-8 border-t border-primary-500/20">
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Education
-              </h3>
-
-              <div className="space-y-4">
-                <div className="rounded-xl border border-primary-500/25 bg-dark-900/40 p-5">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                    <div>
-                      <p className="text-lg font-semibold text-primary-300">
-                        Portland State University
-                      </p>
-                      <p className="text-gray-200">
-                        Master of Science — Computer Science
-                      </p>
-                    </div>
-                    <p className="text-sm text-primary-200/90 md:text-right whitespace-nowrap">
-                      05/2014 – 09/2015
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="page-section" aria-labelledby="about-title"><div className="section-shell">
+      <div className="page-intro"><p className="eyebrow">About</p><h1 id="about-title">I build frontend foundations for ambitious product experiences.</h1><p>For more than a decade, I have built React products across Facebook, Thoughtworks, Figma, and ZestyAI, from operational data visualization and enterprise modernization to real-time collaboration and AI-powered property intelligence.</p></div>
+      <div className="mt-16 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="content-card space-y-6 text-base leading-8 text-slate-300"><p>My strongest work begins with an ambiguous, high-leverage problem: a product that slows down under real data, an AI capability users cannot confidently control, or an architecture that makes every new feature harder to ship.</p><p>I bring structure to those problems. That means modeling the system, defining useful boundaries, measuring the current experience, and aligning product, design, backend, ML, and infrastructure partners around explicit tradeoffs.</p><p>I still care deeply about implementation quality. The goal, however, is larger than elegant code: a system that performs predictably, is observable in production, and leaves the team more capable than before.</p></div>
+        <aside className="content-card"><p className="eyebrow">Education</p><h2 className="mt-5 text-xl font-semibold text-white">Portland State University</h2><p className="mt-2 text-slate-300">Master of Science, Computer Science</p><p className="mt-1 font-mono text-xs text-slate-500">2014 — 2015</p><div className="mt-8 border-t border-white/10 pt-7"><p className="text-sm leading-6 text-slate-400">Based in Vancouver, Washington. Experienced partnering with distributed teams across product, design, engineering, and applied ML.</p></div></aside>
       </div>
-    </section>
+      <div className="mt-16"><p className="eyebrow">Engineering principles</p><div className="mt-7 grid gap-5 md:grid-cols-3">{values.map(([title, text], index) => <article key={title} className="content-card"><span className="font-mono text-xs text-cyan-300">0{index + 1}</span><h2 className="mt-5 text-lg font-semibold text-white">{title}</h2><p className="mt-3 text-sm leading-6 text-slate-400">{text}</p></article>)}</div></div>
+    </div></section>
   )
 }

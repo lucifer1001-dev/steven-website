@@ -1,112 +1,65 @@
 const experiences = [
   {
-    company: 'Restb.ai',
-    role: 'Senior Software Engineer',
-    period: 'Feb 2023 – Present',
-    location: 'Remote (US)',
-    achievements: [
-      'Owned frontend architecture for an AI-powered computer vision platform used by enterprise real estate customers to analyze and search large-scale image datasets.',
-      'Led end-to-end development of AI-powered search and chat workflows, enabling natural language querying over image datasets and reducing manual filtering effort for users.',
-      'Designed and implemented LLM-integrated workflows (RAG-style retrieval + structured results), improving search relevance and usability for non-technical users.',
-      'Built agent-style multi-step exploration UX, increasing successful task completion rates for business users navigating complex datasets.',
-      'Reduced dataset exploration time by ~40% by introducing semantic search, contextual filtering, and guided workflows.',
-      'Architected high-performance frontend systems supporting 10k+ results per query and 100k+ assets, maintaining consistent responsiveness.',
-      'Improved time-to-interactive by 35-45%, driving measurable gains in user engagement and session duration.',
-      'Introduced streaming UI patterns for incremental rendering of AI responses, significantly improving perceived latency.',
-      'Implemented virtualized rendering and progressive hydration, enabling smooth navigation of large image grids.',
-      'Defined client-server data orchestration strategy (React Query, caching, deduplication), reducing redundant requests and improving data consistency.',
-      'Partnered with backend and ML teams to define APIs and data contracts, ensuring scalable integration of model outputs (bounding boxes, labels, confidence scores).',
-      'Established frontend observability (Sentry, Datadog), reducing production debugging time and improving release reliability.',
-      'Influenced frontend standards and architecture decisions across the team, improving consistency and long-term maintainability.',
+    company: 'ZestyAI', role: 'Senior Software Engineer', period: 'Feb 2023 - Present', location: 'Remote, USA',
+    summary: 'Building AI-powered property intelligence applications that help insurance and real estate customers understand property data, computer vision insights, and risk information.',
+    impact: [
+      'Lead frontend architecture for AI-driven property analytics platforms spanning large property datasets, image collections, and complex visualization workflows.',
+      'Design product experiences for machine learning outputs including property attributes, classifications, confidence scores, and risk indicators.',
+      'Built semantic search and AI-assisted investigation workflows that help users discover relevant property information efficiently.',
+      'Integrated LLM capabilities, structured AI outputs, and contextual data into interactive product workflows.',
+      'Improved time to interactive by 35-45% through rendering optimization, caching, data-fetching improvements, and progressive loading.',
+      'Implemented streaming UI, virtualized image interfaces, and React Query orchestration patterns for responsive, reliable experiences.',
+      'Established frontend observability with Sentry and Datadog and partnered across product, design, backend, and machine learning.',
     ],
+    tags: ['React', 'TypeScript', 'AI product UX', 'Semantic search', 'React Query', 'Performance'],
   },
   {
-    company: 'Canva',
-    role: 'Senior Frontend Engineer',
-    period: 'Aug 2020 – Jan 2023',
-    location: 'Remote (US)',
-    achievements: [
-      'Worked on core systems powering Canva’s real-time design editor used by millions of users globally.',
-      'Contributed to high-frequency interaction systems (drag, resize, layout), improving responsiveness for documents with 1000+ elements.',
-      'Reduced interaction latency significantly through rendering optimizations and efficient state management strategies.',
-      'Built and improved real-time collaboration features, enabling multi-user editing with reliable synchronization and conflict resolution.',
-      'Optimized GraphQL data-fetching strategies, reducing UI blocking and improving perceived performance across editing workflows.',
-      'Developed reusable components within a large-scale design system, accelerating development velocity across multiple teams.',
-      'Managed complex shared state for collaborative environments, ensuring consistency under concurrent updates.',
-      'Collaborated cross-functionally with product, backend, and infra teams to deliver scalable features used by millions.',
-      'Mentored junior engineers and influenced frontend best practices, improving code quality and team productivity.',
+    company: 'Figma', role: 'Senior Full-Stack Engineer', period: 'May 2019 - Jan 2023', location: 'San Francisco, CA',
+    summary: 'Built frontend platform capabilities and real-time application systems supporting Figma\'s collaborative design platform.',
+    impact: [
+      'Developed real-time collaboration systems using efficient synchronization, client-side state management, and scalable application architecture.',
+      'Built LiveGraph, a real-time data-fetching platform using GraphQL-like subscriptions, JSON tree responses, and database replication streams.',
+      'Enabled near real-time UI updates by consuming database replication events and synchronizing backend systems with client applications.',
+      'Contributed to distributed data access, PostgreSQL sharding, replication workflows, and DBProxy query routing across database shards.',
+      'Contributed to Code Connect workflows linking production React components with Figma Dev Mode.',
+      'Improved design-system workflows through React components, variables, styles, and reusable frontend patterns.',
     ],
+    tags: ['Real-time systems', 'React', 'LiveGraph', 'PostgreSQL', 'Distributed systems', 'Design systems'],
   },
   {
-    company: 'Globant',
-    role: 'Software Engineer',
-    period: 'Mar 2017 – Jul 2020',
-    location: 'San Francisco, CA',
-    achievements: [
-      'Led migration of legacy systems to React + TypeScript, improving development velocity and reducing maintenance overhead.',
-      'Introduced micro-frontend architecture, enabling independent deployments across teams and improving scalability.',
-      'Built real-time analytics dashboards, enabling business users to monitor operational data and make faster decisions.',
-      'Developed backend services (Node.js, Python) to support frontend features and integrate distributed systems.',
-      'Created reusable component libraries, standardizing UI patterns and improving cross-team consistency.',
-      'Delivered scalable solutions aligned with business needs while maintaining performance and reliability.',
+    company: 'Thoughtworks', role: 'Software Engineer', period: 'Mar 2017 - Apr 2019', location: 'San Francisco, CA',
+    summary: 'Delivered enterprise frontend and full-stack applications while helping organizations modernize legacy systems and engineering practices.',
+    impact: [
+      'Designed React and TypeScript applications for enterprise workflows and customer-facing platforms.',
+      'Led frontend modernization initiatives that improved maintainability and development velocity.',
+      'Built reusable component libraries, real-time analytics dashboards, and interactive data visualizations.',
+      'Designed REST APIs and backend services supporting distributed application workflows.',
+      'Implemented micro-frontend patterns, automated testing, CI/CD, code review, and iterative delivery practices.',
     ],
+    tags: ['React', 'TypeScript', 'Micro-frontends', 'REST APIs', 'Testing', 'CI/CD'],
   },
   {
-    company: 'Google',
-    role: 'Software Engineer',
-    period: 'Oct 2015 – Feb 2017',
-    location: 'Mountain View, CA',
-    achievements: [
-      'Developed internal tools for large-scale telemetry and system monitoring, used by engineering teams managing distributed infrastructure.',
-      'Optimized rendering and data handling for high-volume datasets, improving usability and reducing analysis time for internal users.',
-      'Collaborated with backend teams to design APIs supporting real-time data visualization systems.',
-      'Improved debugging workflows and system visibility, enabling faster issue detection and resolution.',
+    company: 'Facebook', role: 'Software Engineer', period: 'Oct 2015 - Feb 2017', location: 'Menlo Park, CA',
+    summary: 'Built React-based internal applications and visualization tools supporting engineering workflows and operational visibility.',
+    impact: [
+      'Developed JavaScript and React applications supporting engineering productivity and operational workflows.',
+      'Built interactive dashboards for system metrics, telemetry, and high-volume operational datasets.',
+      'Designed efficient client-side data handling and integrated frontend applications with backend APIs.',
+      'Improved performance through rendering optimization, asynchronous loading, and reusable component patterns.',
     ],
+    tags: ['React', 'JavaScript', 'Telemetry', 'Data visualization', 'Performance'],
   },
 ]
 
 export default function Experience() {
-  return (
-    <section
-      id="experience"
-      className="py-20 relative pt-32"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center animate-fade-in-down">
-          <span className="gradient-text">Professional Experience</span>
-        </h2>
-        <div className="space-y-6 md:space-y-8">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="relative animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.15}s` }}
-            >
-              <div className="glass-strong rounded-2xl p-5 md:p-7 shadow-lg transition-all duration-300 border border-white/10 hover:border-primary-300/35 hover:shadow-primary-900/20">
-                <div className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-gradient-to-b from-primary-400/90 via-primary-500/80 to-primary-700/70" />
-
-                <div className="pl-3 md:pl-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <div className="min-w-0">
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 tracking-tight">
-                      {exp.company}
-                    </h3>
-                    <p className="text-lg md:text-xl font-semibold gradient-text">
-                      {exp.role}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col items-start lg:items-end gap-2">
-                    <p className="text-primary-200 font-semibold text-lg whitespace-nowrap">{exp.period}</p>
-                    <span className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm text-slate-300">
-                      {exp.location}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+  return <section className="page-section" aria-labelledby="experience-title"><div className="section-shell">
+    <div className="page-intro"><p className="eyebrow">Career</p><h1 id="experience-title">A decade of building scalable products and frontend platforms.</h1><p>My experience spans AI-powered property intelligence, real-time collaboration, enterprise modernization, and operational data visualization.</p></div>
+    <div className="relative mt-16 space-y-8 before:absolute before:inset-y-0 before:left-[7px] before:w-px before:bg-gradient-to-b before:from-cyan-300/60 before:via-white/10 before:to-transparent md:before:left-[191px]">
+      {experiences.map((experience) => <article key={experience.company} className="relative grid gap-6 pl-10 md:grid-cols-[160px_1fr] md:gap-12 md:pl-0">
+        <span className="absolute left-0 top-2 h-[15px] w-[15px] rounded-full border-4 border-slate-950 bg-cyan-300 md:left-[184px]" aria-hidden="true" />
+        <div className="md:text-right"><p className="font-mono text-sm text-cyan-300">{experience.period}</p><p className="mt-2 text-sm text-slate-500">{experience.location}</p></div>
+        <div className="content-card"><p className="text-sm font-medium uppercase tracking-[0.16em] text-cyan-300">{experience.company}</p><h2 className="mt-2 text-2xl font-semibold text-white">{experience.role}</h2><p className="mt-4 leading-7 text-slate-300">{experience.summary}</p><ul className="mt-6 space-y-3">{experience.impact.map((item) => <li key={item} className="flex gap-3 text-sm leading-6 text-slate-400"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" aria-hidden="true" />{item}</li>)}</ul><div className="mt-6 flex flex-wrap gap-2">{experience.tags.map((tag) => <span key={tag} className="tech-pill">{tag}</span>)}</div></div>
+      </article>)}
+    </div>
+  </div></section>
 }

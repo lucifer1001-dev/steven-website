@@ -1,113 +1,14 @@
-const skillCategories = [
-  {
-    title: 'Frontend & Architecture',
-    skills: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'JavaScript (ES6+)',
-      'SPA',
-      'SSR',
-      'ISR',
-      'Micro-frontends',
-      'Component systems',
-    ],
-  },
-  {
-    title: 'AI & Data Systems',
-    skills: [
-      'LLM-integrated UX',
-      'RAG-style search',
-      'Chat-based interfaces',
-      'Agent workflows',
-      'ML-driven UI',
-      'Explainable AI',
-    ],
-  },
-  {
-    title: 'Data & State',
-    skills: [
-      'React Query',
-      'Server/client state architecture',
-    ],
-  },
-  {
-    title: 'Observability & Tooling',
-    skills: [
-      'Sentry',
-      'Datadog',
-      'Webpack',
-      'Vite',
-      'Chrome DevTools',
-    ],
-  },
-  {
-    title: 'Performance & Rendering',
-    skills: [
-      'Core Web Vitals',
-      'Virtualization',
-      'Progressive hydration',
-      'Streaming UI',
-      'Rendering optimization',
-    ],
-  },
-  {
-    title: 'Backend & APIs',
-    skills: [
-      'Node.js',
-      'Python',
-      'REST APIs',
-      'GraphQL',
-    ],
-  },
-  {
-    title: 'Infrastructure',
-    skills: [
-      'AWS (EC2, S3, Lambda)',
-      'Edge architectures',
-      'CDN optimization',
-      'Docker',
-      'CI/CD',
-    ],
-  },
+const capabilities = [
+  { title: 'Frontend engineering', summary: 'Modern, accessible application architecture for enterprise and consumer products.', skills: ['React', 'Next.js', 'TypeScript', 'JavaScript ES6+', 'HTML5', 'CSS3', 'SSR / ISR', 'WCAG', 'Design systems', 'Micro-frontends'] },
+  { title: 'State and data architecture', summary: 'Reliable client and server state across asynchronous and real-time workflows.', skills: ['TanStack Query', 'Client state', 'Server state', 'Caching strategies', 'Data fetching', 'Real-time synchronization'] },
+  { title: 'AI-powered experiences', summary: 'Intuitive interfaces connecting users with intelligent product capabilities.', skills: ['LLM integration', 'AI assistants', 'Semantic search', 'Streaming responses', 'Structured AI output', 'Prompt engineering'] },
+  { title: 'Performance and rendering', summary: 'Fast interaction and visualization across high-volume, data-intensive products.', skills: ['Core Web Vitals', 'Virtualization', 'Code splitting', 'Lazy loading', 'Progressive hydration', 'Streaming UI', 'Large datasets'] },
+  { title: 'Testing and quality', summary: 'Automated feedback loops supporting confident and sustainable delivery.', skills: ['Jest', 'React Testing Library', 'Playwright', 'Cypress', 'Unit testing', 'Integration testing', 'E2E testing'] },
+  { title: 'Tooling and developer experience', summary: 'Consistent development environments and maintainable component workflows.', skills: ['Webpack', 'Vite', 'Babel', 'ESLint', 'Prettier', 'Storybook', 'Chrome DevTools', 'npm / Yarn / pnpm'] },
+  { title: 'Backend and APIs', summary: 'Pragmatic services and interfaces supporting distributed product systems.', skills: ['Node.js', 'Python', 'REST APIs', 'GraphQL', 'API design', 'Distributed systems'] },
+  { title: 'Cloud and infrastructure', summary: 'Delivery and runtime patterns for reliable web applications at scale.', skills: ['AWS EC2 / S3 / Lambda', 'CDN optimization', 'Edge architecture', 'Docker', 'CI/CD', 'Cloud deployment'] },
 ]
 
 export default function Skills() {
-  return (
-    <section
-      id="skills"
-      className="py-20 relative pt-32"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center animate-fade-in-down">
-          <span className="gradient-text">Technical Skills</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category, index) => (
-            <div
-              key={category.title}
-              className="glass-strong rounded-xl p-6 shadow-lg transition-all duration-300 border border-white/10 hover:border-primary-300/35 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <h3 className="text-xl font-semibold text-primary-300 mb-4 flex items-center">
-                <span className="w-1 h-6 bg-gradient-to-b from-primary-400 to-primary-600 rounded-full mr-3"></span>
-                {category.title}
-              </h3>
-              <ul className="space-y-2">
-                {category.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="text-slate-300 flex items-center hover:text-primary-300 transition-colors duration-200"
-                  >
-                    <span className="w-2 h-2 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full mr-3 flex-shrink-0"></span>
-                    <span>{skill}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+  return <section className="page-section" aria-labelledby="skills-title"><div className="section-shell"><div className="page-intro"><p className="eyebrow">Capabilities</p><h1 id="skills-title">Frontend depth for products that demand more.</h1><p>I specialize in React architecture, performance, real-time interfaces, AI-powered product experiences, and the engineering practices needed to deliver them reliably.</p></div><div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{capabilities.map((capability, index) => <article key={capability.title} className="content-card"><span className="font-mono text-xs text-cyan-300">{String(index + 1).padStart(2, '0')}</span><h2 className="mt-5 text-xl font-semibold text-white">{capability.title}</h2><p className="mt-3 min-h-12 text-sm leading-6 text-slate-400">{capability.summary}</p><ul className="mt-6 flex flex-wrap gap-2">{capability.skills.map((skill) => <li key={skill} className="tech-pill">{skill}</li>)}</ul></article>)}</div></div></section>
 }

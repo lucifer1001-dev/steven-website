@@ -1,65 +1,75 @@
 import Link from 'next/link'
-import Image from 'next/image'
+
+const outcomes = [
+  { value: '10+', label: 'years building at scale' },
+  { value: '4', label: 'product domains at scale' },
+  { value: 'Performance', label: 'focused engineering' },
+]
 
 export default function HeroSection() {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative pt-16"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-[1]">
-        <div className="text-center">
-          <div
-            className="flex justify-center mb-6 animate-fade-in-up"
-            style={{ animationDelay: '0.05s' }}
-          >
-            <div className="relative w-40 h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-full overflow-hidden ring-4 ring-primary-400/70 shadow-xl shadow-primary-900/50 bg-dark-900 profile-glow">
-              <Image
-                src="/profile.png"
-                alt="Steven Chen"
-                fill
-                sizes="192px"
-                className="object-cover object-[50%_10%]"
-                priority
-              />
-            </div>
+    <section className="relative flex min-h-[92vh] items-center pt-24" aria-labelledby="hero-title">
+      <div className="section-shell grid items-center gap-14 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
+        <div>
+          <div className="eyebrow mb-6">
+            <span className="status-dot" aria-hidden="true" />
+            Vancouver, WA · Senior Frontend Engineer
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up drop-shadow-2xl">
-            <span className="relative text-white">
-              <span className="absolute inset-0 blur-2xl bg-cyan-300/20 opacity-70 -z-10"></span>
-              Steven Chen
-            </span>
+
+          <h1 id="hero-title" className="max-w-4xl text-5xl font-semibold tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
+            I build frontend systems that stay fast when products get complex.
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-100 mb-4 font-semibold animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
-            <span className="relative">
-              <span className="absolute inset-0 blur-xl bg-cyan-200/20 -z-10"></span>
-              Senior Software Engineer · 10+ Years Experience
-            </span>
+
+          <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+            Senior Software Engineer specializing in React, TypeScript, frontend architecture,
+            real-time applications, and AI-powered product experiences. I build scalable user
+            experiences for complex products and data-intensive platforms.
           </p>
-          <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-3xl mx-auto animate-fade-in-up font-semibold drop-shadow-md" style={{ animationDelay: '0.4s' }}>
-            AI-Driven UX • LLM, Search & Agent Workflows • Large-Scale Frontend Architecture
-          </p>
-          <p className="text-base md:text-lg text-slate-200 mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up drop-shadow-sm" style={{ animationDelay: '0.6s' }}>
-            Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications,
-            including AI-powered and real-time systems at scale. Specialized in AI-driven user experiences and frontend
-            architecture for large datasets from 10k to 1M+ records.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <Link
-              href="/experience"
-              className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-xl font-semibold hover:from-primary-500 hover:to-primary-400 transition-all duration-300 shadow-lg shadow-primary-500/50 hover:shadow-xl hover:shadow-primary-500/60 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-900"
-            >
-              View Experience
+
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Link href="/#projects" className="button-primary">
+              Explore selected projects
+              <span aria-hidden="true">↘</span>
             </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 glass text-white border border-primary-500/30 rounded-xl font-semibold hover:border-primary-400 hover:bg-white/10 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-dark-900"
-            >
-              Get In Touch
+            <Link href="/experience" className="button-secondary">
+              View experience
             </Link>
           </div>
+
+          <dl className="mt-12 grid max-w-3xl grid-cols-1 gap-4 border-t border-white/10 pt-7 sm:grid-cols-3">
+            {outcomes.map((outcome) => (
+              <div key={outcome.label}>
+                <dt className="text-sm text-slate-400">{outcome.label}</dt>
+                <dd className="mt-1 text-2xl font-semibold text-white">{outcome.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
+
+        <aside className="system-card" aria-label="Engineering profile">
+          <div className="flex items-center justify-between border-b border-white/10 pb-5">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">Engineering profile</p>
+              <p className="mt-1 text-sm text-slate-400">Frontend Architecture · AI Products · Performance</p>
+            </div>
+            <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">Available</span>
+          </div>
+
+          <div className="space-y-7 py-7">
+            <ProfileRow index="01" title="Frontend architecture" description="Scalable React platforms, design systems, performance optimization, and accessible product foundations." />
+            <ProfileRow index="02" title="Real-time and AI interfaces" description="Collaborative applications, semantic search experiences, streaming AI responses, and intelligent workflows." />
+            <ProfileRow index="03" title="Product engineering perspective" description="Frontend systems informed by APIs, cloud platforms, backend services, and observability." />
+          </div>
+
+          <div className="flex flex-wrap gap-2 border-t border-white/10 pt-5">
+            {['React', 'TypeScript', 'Next.js', 'React Query', 'GraphQL', 'Node.js', 'AI APIs'].map((skill) => <span key={skill} className="tech-pill">{skill}</span>)}
+          </div>
+        </aside>
       </div>
     </section>
   )
+}
+
+function ProfileRow({ index, title, description }: { index: string; title: string; description: string }) {
+  return <div className="grid grid-cols-[auto_1fr] gap-4"><span className="font-mono text-xs text-cyan-400/70">{index}</span><div><h2 className="font-semibold text-white">{title}</h2><p className="mt-1 text-sm leading-6 text-slate-400">{description}</p></div></div>
 }

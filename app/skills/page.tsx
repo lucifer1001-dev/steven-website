@@ -7,12 +7,13 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'Skills',
   description:
-    'Technical skills in frontend architecture, LLM-integrated UX, RAG-style search, agent workflows, rendering performance, observability tooling, APIs, and infrastructure.',
+    'Technical skills in React architecture, TypeScript, real-time data, AI product integration, frontend performance, testing, APIs, and cloud infrastructure.',
+  alternates: { canonical: '/skills' },
 }
 
 export default function SkillsPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main id="main-content" className="min-h-screen relative overflow-hidden">
       <PageBackground variant="skills" />
       <div className="relative z-[1]">
         <Navigation />

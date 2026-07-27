@@ -6,12 +6,13 @@ import PageBackground from '@/components/PageBackground'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact Steven Chen, Senior Software Engineer in Vancouver, WA, via email, phone, or stevenchen.life.',
+  description: 'Contact Steven Blake Chen, a Senior Frontend Engineer in Vancouver, WA, about React, frontend platform, and AI product engineering opportunities.',
+  alternates: { canonical: '/contact' },
 }
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main id="main-content" className="min-h-screen relative overflow-hidden">
       <PageBackground variant="contact" />
       <div className="relative z-[1]">
         <Navigation />

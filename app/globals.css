@@ -2,317 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    @apply bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 text-gray-100;
-    background-attachment: fixed;
-  }
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #020617; color: #e2e8f0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+::selection { background: rgba(103, 232, 249, .28); color: white; }
+
+@layer components {
+  .section-shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
+  .section-space { @apply relative py-20 sm:py-28; }
+  .page-section { @apply relative min-h-screen pb-24 pt-36 sm:pt-40; }
+  .eyebrow { @apply inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-[0.18em] text-cyan-300; }
+  .status-dot { @apply h-2 w-2 rounded-full bg-emerald-400; box-shadow: 0 0 0 4px rgba(52, 211, 153, .1), 0 0 18px rgba(52, 211, 153, .65); }
+  .button-primary { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-lg bg-cyan-300 px-6 py-3 text-sm font-semibold text-slate-950 transition duration-200 hover:-translate-y-0.5 hover:bg-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950; }
+  .button-secondary { @apply inline-flex min-h-12 items-center justify-center rounded-lg border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition duration-200 hover:border-white/25 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200; }
+  .nav-link { @apply rounded-lg px-3 py-2 text-sm text-slate-400 transition-colors hover:bg-white/5 hover:text-white; }
+  .nav-link-active { @apply bg-white/5 text-cyan-200; }
+  .system-card { @apply relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-6 shadow-2xl shadow-cyan-950/20 backdrop-blur sm:p-8; }
+  .system-card::before { content: ''; @apply absolute inset-x-0 top-0 h-px; background: linear-gradient(90deg, transparent, rgba(103,232,249,.8), transparent); }
+  .tech-pill { @apply rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1 font-mono text-xs text-slate-300; }
+  .section-heading { @apply grid items-end gap-6 lg:grid-cols-[1fr_0.7fr]; }
+  .section-heading h2 { @apply mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-5xl; }
+  .section-heading > p { @apply max-w-xl leading-7 text-slate-400 lg:justify-self-end; }
+  .case-study-card { @apply grid gap-6 rounded-2xl border border-white/10 bg-slate-900/55 p-6 transition duration-300 hover:border-cyan-300/25 hover:bg-slate-900/80 sm:p-8 lg:grid-cols-[40px_1fr_260px]; }
+  .cta-panel { @apply flex flex-col items-start justify-between gap-8 overflow-hidden rounded-2xl border border-cyan-300/15 bg-gradient-to-br from-cyan-400/10 via-slate-900/80 to-blue-500/10 p-8 sm:p-12 lg:flex-row lg:items-end; }
+  .page-intro { @apply max-w-4xl; }
+  .page-intro h1 { @apply mt-5 text-4xl font-semibold tracking-[-0.035em] text-white sm:text-6xl; }
+  .page-intro > p:last-child { @apply mt-6 max-w-3xl text-lg leading-8 text-slate-300; }
+  .content-card { @apply rounded-2xl border border-white/10 bg-slate-900/65 p-6 backdrop-blur sm:p-8; }
+  .form-control { @apply mt-2 w-full rounded-lg border border-white/10 bg-slate-950/70 px-4 py-3 text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-300/50 focus:ring-2 focus:ring-cyan-300/10; }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .glass {
-    background: rgba(15, 23, 42, 0.42);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(148, 163, 184, 0.14);
-  }
-  
-  .glass-strong {
-    background: rgba(15, 23, 42, 0.56);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(148, 163, 184, 0.16);
-  }
-  
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-primary-300 to-primary-500;
-  }
-  
-  .gradient-border {
-    position: relative;
-    background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(59, 130, 246, 0.3));
-    border-radius: 12px;
-    padding: 1px;
-  }
-  
-  .gradient-border-content {
-    @apply bg-dark-800 rounded-[11px];
-  }
-  
-  .bg-radial-gradient {
-    background: radial-gradient(circle at center, var(--tw-gradient-stops));
-  }
-  
-  /* Animated tech pattern overlay */
-  .tech-pattern {
-    background-image: 
-      linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: pattern-move 20s linear infinite;
-  }
-  
-  @keyframes pattern-move {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 50px 50px;
-    }
-  }
+.page-background { position: fixed; inset: 0; pointer-events: none; overflow: hidden; background: radial-gradient(circle at 75% 10%, rgba(8,145,178,.13), transparent 34%), radial-gradient(circle at 15% 70%, rgba(30,64,175,.1), transparent 32%), #020617; }
+.page-background-about { background: radial-gradient(circle at 80% 25%, rgba(14,116,144,.13), transparent 35%), #020617; }
+.page-background-skills { background: radial-gradient(circle at 15% 20%, rgba(37,99,235,.12), transparent 32%), #020617; }
+.page-background-contact { background: radial-gradient(circle at 80% 75%, rgba(13,148,136,.12), transparent 34%), #020617; }
+.page-grid { position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(148,163,184,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.08) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(to bottom, black, transparent 75%); }
 
-  /* Page-level background animations */
-
-  /* About page: soft rotating radial gradients for personal focus */
-  .page-bg-about {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(circle at 15% 25%, rgba(59, 130, 246, 0.5), transparent 60%),
-      radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.45), transparent 65%);
-    animation: page-about-orbit 16s ease-in-out infinite alternate;
-  }
-
-  @keyframes page-about-orbit {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: translate3d(4%, -6%, 0) scale(1.08);
-      opacity: 1;
-    }
-    100% {
-      transform: translate3d(-4%, 4%, 0) scale(1.04);
-      opacity: 1;
-    }
-  }
-
-  /* Skills page: animated diagonal bands hinting at structure */
-  .page-bg-skills {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background-image: linear-gradient(
-      135deg,
-      rgba(15, 23, 42, 0.15) 0%,
-      rgba(37, 99, 235, 0.5) 30%,
-      rgba(56, 189, 248, 0.4) 50%,
-      rgba(15, 23, 42, 0.85) 75%,
-      rgba(15, 23, 42, 0.2) 100%
-    );
-    background-size: 260% 260%;
-    animation: page-skills-shift 18s linear infinite;
-    opacity: 1;
-  }
-
-  @keyframes page-skills-shift {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 100%;
-    }
-  }
-
-  /* Experience page: slow moving gradient column behind timeline */
-  .page-bg-experience {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.6), transparent 60%),
-      radial-gradient(circle at 50% 90%, rgba(14, 165, 233, 0.45), transparent 60%);
-    opacity: 1;
-    animation: page-experience-pulse 14s ease-in-out infinite alternate;
-  }
-
-  @keyframes page-experience-pulse {
-    0% {
-      transform: scaleX(0.9);
-      opacity: 0.9;
-    }
-    50% {
-      transform: scaleX(1.1);
-      opacity: 1;
-    }
-    100% {
-      transform: scaleX(0.95);
-      opacity: 0.95;
-    }
-  }
-
-  /* Contact page: layered radial waves from bottom-right for conversation feel */
-  .page-bg-contact {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(circle at 85% 90%, rgba(56, 189, 248, 0.55), transparent 60%),
-      radial-gradient(circle at 80% 75%, rgba(129, 230, 217, 0.4), transparent 65%);
-    animation: page-contact-wave 18s ease-in-out infinite alternate;
-  }
-
-  @keyframes page-contact-wave {
-    0% {
-      transform: translate3d(0, 6%, 0) scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: translate3d(-4%, -2%, 0) scale(1.08);
-      opacity: 1;
-    }
-    100% {
-      transform: translate3d(-2%, 2%, 0) scale(1.04);
-      opacity: 1;
-    }
-  }
-
-  /* Profile image subtle glow */
-  .profile-glow {
-    animation: profile-glow 12s ease-in-out infinite alternate;
-  }
-
-  @keyframes profile-glow {
-    0% {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.45), 0 0 60px rgba(14, 165, 233, 0.35);
-      transform: translateY(0px);
-    }
-    50% {
-      box-shadow: 0 0 28px rgba(59, 130, 246, 0.65), 0 0 80px rgba(14, 165, 233, 0.5);
-      transform: translateY(-4px);
-    }
-    100% {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.45), 0 0 60px rgba(14, 165, 233, 0.35);
-      transform: translateY(0px);
-    }
-  }
-
-  /* About page: focused orbit glow behind content */
-  .about-orbit {
-    position: absolute;
-    inset: auto;
-    top: 8rem;
-    right: -6rem;
-    width: 420px;
-    height: 420px;
-    border-radius: 9999px;
-    background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.45), transparent 65%),
-      radial-gradient(circle at 70% 70%, rgba(14, 165, 233, 0.4), transparent 65%);
-    filter: blur(36px);
-    opacity: 0.45;
-    animation: about-orbit 22s linear infinite alternate;
-    pointer-events: none;
-  }
-
-  @keyframes about-orbit {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1);
-      opacity: 0.4;
-    }
-    50% {
-      transform: translate3d(-6%, 4%, 0) scale(1.08);
-      opacity: 0.55;
-    }
-    100% {
-      transform: translate3d(4%, -4%, 0) scale(1.02);
-      opacity: 0.4;
-    }
-  }
-
-  /* Skills page: animated grid background to hint at systems / structure */
-  .skills-grid-animate {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(circle at center, black, transparent 70%);
-    opacity: 0.7;
-    animation: skills-grid 28s linear infinite;
-    pointer-events: none;
-  }
-
-  @keyframes skills-grid {
-    0% {
-      background-position: 0 0, 0 0;
-    }
-    50% {
-      background-position: 60px 30px, 30px 60px;
-    }
-    100% {
-      background-position: 120px 60px, 60px 120px;
-    }
-  }
-
-  /* Experience page: animated vertical timeline glow */
-  .experience-line-animate {
-    position: absolute;
-    top: 6rem;
-    bottom: 4rem;
-    left: 50%;
-    width: 2px;
-    transform: translateX(-50%);
-    background: linear-gradient(to bottom, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.7), rgba(59, 130, 246, 0));
-    filter: blur(1px);
-    opacity: 0.55;
-    animation: experience-pulse 3.6s ease-in-out infinite;
-    pointer-events: none;
-  }
-
-  @keyframes experience-pulse {
-    0%,
-    100% {
-      opacity: 0.3;
-      box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
-    }
-    50% {
-      opacity: 0.75;
-      box-shadow: 0 0 26px rgba(59, 130, 246, 0.75);
-    }
-  }
-
-  /* Contact page: gentle orbiting highlight around the form */
-  .contact-orbit {
-    position: absolute;
-    inset: auto;
-    bottom: -6rem;
-    left: -5rem;
-    width: 420px;
-    height: 420px;
-    border-radius: 9999px;
-    background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, 0.45), transparent 60%),
-      radial-gradient(circle at 70% 70%, rgba(94, 234, 212, 0.4), transparent 65%);
-    filter: blur(40px);
-    opacity: 0.45;
-    animation: contact-orbit 26s ease-in-out infinite alternate;
-    pointer-events: none;
-  }
-
-  @keyframes contact-orbit {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1);
-    }
-    50% {
-      transform: translate3d(8%, -6%, 0) scale(1.06);
-    }
-    100% {
-      transform: translate3d(3%, 3%, 0) scale(1.02);
-    }
-  }
-}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
