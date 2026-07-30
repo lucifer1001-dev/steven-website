@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 const outcomes = [
   { value: '10+', label: 'years building at scale' },
-  { value: '4', label: 'product domains at scale' },
-  { value: 'Performance', label: 'focused engineering' },
+  { value: '10k-1M+', label: 'records in frontend systems' },
+  { value: '+30-50%', label: 'Core Web Vitals improvement' },
 ]
 
 export default function HeroSection() {
@@ -13,17 +13,17 @@ export default function HeroSection() {
         <div>
           <div className="eyebrow mb-6">
             <span className="status-dot" aria-hidden="true" />
-            Vancouver, WA · Senior Frontend Engineer
+            Vancouver, WA · Senior Software Engineer
           </div>
 
           <h1 id="hero-title" className="max-w-4xl text-5xl font-semibold tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
-            I build frontend systems that stay fast when products get complex.
+            I build AI-powered and real-time products that stay fast at scale.
           </h1>
 
           <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-            Senior Software Engineer specializing in React, TypeScript, frontend architecture,
-            real-time applications, and AI-powered product experiences. I build scalable user
-            experiences for complex products and data-intensive platforms.
+            Senior Software Engineer with 10+ years of experience building high-performance,
+            data-intensive applications. I specialize in AI-driven user experiences, LLM search
+            and agent workflows, and frontend architecture for datasets from 10k to 1M+ records.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -50,19 +50,19 @@ export default function HeroSection() {
           <div className="flex items-center justify-between border-b border-white/10 pb-5">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">Engineering profile</p>
-              <p className="mt-1 text-sm text-slate-400">Frontend Architecture · AI Products · Performance</p>
+              <p className="mt-1 text-sm text-slate-400">AI Products · Frontend Architecture · Performance</p>
             </div>
             <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">Available</span>
           </div>
 
           <div className="space-y-7 py-7">
-            <ProfileRow index="01" title="Frontend architecture" description="Scalable React platforms, design systems, performance optimization, and accessible product foundations." />
-            <ProfileRow index="02" title="Real-time and AI interfaces" description="Collaborative applications, semantic search experiences, streaming AI responses, and intelligent workflows." />
-            <ProfileRow index="03" title="Product engineering perspective" description="Frontend systems informed by APIs, cloud platforms, backend services, and observability." />
+            <ProfileRow index="01" title="AI-driven experiences" description="LLM-integrated UX, RAG search, agent workflows, and explainable ML interfaces." />
+            <ProfileRow index="02" title="Data-intensive frontend" description="Responsive React architecture for large datasets, image collections, and real-time workflows." />
+            <ProfileRow index="03" title="Technical leadership" description="Architecture direction, cross-team decisions, observability, standards, and mentorship." />
           </div>
 
           <div className="flex flex-wrap gap-2 border-t border-white/10 pt-5">
-            {['React', 'TypeScript', 'Next.js', 'React Query', 'GraphQL', 'Node.js', 'AI APIs'].map((skill) => <span key={skill} className="tech-pill">{skill}</span>)}
+            {['React', 'TypeScript', 'Next.js', 'React Query', 'GraphQL', 'Node.js', 'Python', 'AWS'].map((skill) => <span key={skill} className="tech-pill">{skill}</span>)}
           </div>
         </aside>
       </div>

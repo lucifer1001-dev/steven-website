@@ -132,7 +132,7 @@ export async function POST(request: Request) {
     )
   } catch {
     return NextResponse.json(
-      { error: 'Unable to send message right now. Please email me directly at chensteven890@outlook.com.' },
+      { error: 'Unable to send message right now. Please email me directly at chenstevens890@gmail.com.' },
       { status: 500 }
     )
   }

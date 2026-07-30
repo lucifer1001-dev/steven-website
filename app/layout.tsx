@@ -5,13 +5,13 @@ import { SITE_URL } from '@/lib/site'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Steven Blake Chen | Senior Frontend Engineer',
-    template: '%s | Steven Blake Chen'
+    default: 'Steven Chen | Senior Software Engineer',
+    template: '%s | Steven Chen'
   },
   description:
-    'Steven Blake Chen is a Senior Frontend Engineer with 10+ years of experience building scalable React applications, frontend architectures, real-time interfaces, and AI-powered product experiences.',
+    'Steven Chen is a Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications, including AI-powered and real-time systems at scale.',
   keywords: [
-    'Steven Blake Chen',
+    'Steven Chen',
     'Senior Frontend Engineer',
     'Senior React Engineer',
     'Frontend Platform Engineer',
@@ -27,23 +27,23 @@ export const metadata: Metadata = {
     'AI Assistants',
     'Real-time Systems'
   ],
-  authors: [{ name: 'Steven Blake Chen', url: SITE_URL }],
-  creator: 'Steven Blake Chen',
+  authors: [{ name: 'Steven Chen', url: SITE_URL }],
+  creator: 'Steven Chen',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
-    title: 'Steven Blake Chen | Senior Frontend Engineer',
+    title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Frontend Engineer specializing in React architecture, real-time applications, AI-powered interfaces, and high-performance user experiences.',
-    siteName: 'Steven Blake Chen Portfolio',
+      'Senior Software Engineer specializing in AI-driven user experiences, frontend architecture, and high-performance data-intensive applications.',
+    siteName: 'Steven Chen Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Steven Blake Chen | Senior Frontend Engineer',
+    title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Frontend Engineer specializing in React architecture, real-time applications, AI-powered interfaces, and high-performance user experiences.',
+      'Senior Software Engineer specializing in AI-driven user experiences, frontend architecture, and high-performance data-intensive applications.',
   },
   robots: {
     index: true,
@@ -65,10 +65,10 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   url: SITE_URL,
-  name: 'Steven Blake Chen',
-  jobTitle: 'Senior Frontend Engineer',
+  name: 'Steven Chen',
+  jobTitle: 'Senior Software Engineer',
   description:
-    'Senior Frontend Engineer with 10+ years of experience building scalable React applications, frontend platforms, real-time interfaces, and AI-powered product experiences.',
+    'Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications including AI-powered and real-time systems.',
   knowsAbout: [
     'React',
     'TypeScript',
@@ -87,9 +87,9 @@ const jsonLd = {
       name: 'Portland State University'
     }
   ],
-  worksFor: { '@type': 'Organization', name: 'ZestyAI' },
-  email: 'mailto:chensteven890@outlook.com',
-  telephone: '+1-917-764-8247',
+  worksFor: { '@type': 'Organization', name: 'Restb.ai' },
+  email: 'mailto:chenstevens890@gmail.com',
+  telephone: '+1-339-399-1987',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Vancouver',

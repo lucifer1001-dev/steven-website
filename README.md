@@ -1,4 +1,4 @@
-# Steven Blake Chen — Senior Frontend Engineer Portfolio
+# Steven Chen — Senior Software Engineer Portfolio
 
 A focused engineering portfolio built with Next.js, TypeScript, and Tailwind CSS. The site presents selected technical impact, professional experience, engineering capabilities, and a production-ready contact workflow.
 

@@ -3,21 +3,21 @@ import Link from 'next/link'
 const projects = [
   {
     number: '01',
-    title: 'AI Property Intelligence Platform',
-    summary: 'Built AI-powered property intelligence experiences that allow users to analyze property data, computer vision insights, risk indicators, and semantic search results through intuitive workflows.',
-    capabilities: ['React', 'TypeScript', 'AI', 'Data Visualization'],
+    title: 'AI Search and Exploration Platform',
+    summary: 'Built natural-language search, RAG retrieval, and guided AI workflows for enterprise users exploring large-scale real estate image datasets.',
+    capabilities: ['React', 'TypeScript', 'RAG Search', 'Agent UX', 'Virtualization'],
   },
   {
     number: '02',
-    title: 'Real-time Collaboration Platform',
-    summary: 'Developed scalable frontend experiences for collaborative applications with real-time synchronization, efficient state management, and high-performance user interfaces.',
-    capabilities: ['React', 'TypeScript', 'GraphQL', 'Real-time Systems'],
+    title: 'Real-time Collaborative Editor',
+    summary: 'Improved high-frequency editing interactions, multi-user synchronization, shared state, and GraphQL data fetching for complex collaborative documents.',
+    capabilities: ['React', 'GraphQL', 'Real-time Collaboration', 'Design Systems'],
   },
   {
     number: '03',
-    title: 'AI Testing Assistant',
-    summary: 'Built an AI-powered workflow that converts natural language requirements into automated testing scenarios and developer-friendly validation flows.',
-    capabilities: ['React', 'Playwright', 'Python', 'LLM APIs'],
+    title: 'Data-intensive Engineering Platforms',
+    summary: 'Modernized enterprise frontends and built analytics and telemetry interfaces that help teams understand high-volume operational data.',
+    capabilities: ['React', 'TypeScript', 'Micro-frontends', 'Data Visualization', 'APIs'],
   },
 ]
 

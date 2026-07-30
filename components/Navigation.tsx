@@ -29,9 +29,9 @@ export default function Navigation() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${isScrolled || isOpen ? 'border-b border-white/10 bg-slate-950/90 backdrop-blur-xl' : 'bg-transparent'}`}>
       <nav className="section-shell flex h-20 items-center justify-between" aria-label="Primary navigation">
-        <Link href="/" className="group flex items-center gap-3" aria-label="Steven Blake Chen, home">
+        <Link href="/" className="group flex items-center gap-3" aria-label="Steven Chen, home">
           <span className="grid h-9 w-9 place-items-center rounded-lg border border-cyan-300/20 bg-cyan-300/10 font-mono text-sm font-semibold text-cyan-200 transition-colors group-hover:bg-cyan-300/15">SC</span>
-          <span><span className="block text-sm font-semibold text-white">Steven Blake Chen</span><span className="block text-xs text-slate-400">Senior Frontend Engineer</span></span>
+          <span><span className="block text-sm font-semibold text-white">Steven Chen</span><span className="block text-xs text-slate-400">Senior Software Engineer</span></span>
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">

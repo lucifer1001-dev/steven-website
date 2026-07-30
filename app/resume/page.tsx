@@ -6,7 +6,7 @@ import Resume from '@/components/Resume'
 
 export const metadata: Metadata = {
   title: 'Resume',
-  description: 'Resume for Steven Blake Chen, a Senior Frontend Engineer specializing in React, TypeScript, real-time applications, and AI-powered product experiences.',
+  description: 'Resume for Steven Chen, a Senior Software Engineer specializing in AI-powered experiences, frontend architecture, real-time applications, and performance.',
   alternates: { canonical: '/resume' },
 }
 

@@ -7,7 +7,7 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'Experience',
   description:
-    'Senior frontend engineering experience at ZestyAI, Figma, Thoughtworks, and Facebook across React products, real-time collaboration, AI interfaces, and data visualization.',
+    'Professional experience at Restb.ai, Canva, Globant, and Google across AI-powered search, real-time collaboration, frontend architecture, and data visualization.',
   alternates: { canonical: '/experience' },
 }
 
