@@ -7,7 +7,7 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'Experience',
   description:
-    'Professional experience at Restb.ai, Canva, Globant, and Google across AI-powered search, real-time collaboration, frontend architecture, and data visualization.',
+    'Professional experience at Restb.ai, Canva, Globant, and Google across production AI products, React platforms, real-time collaboration, enterprise applications, and data visualization.',
   alternates: { canonical: '/experience' },
 }
 

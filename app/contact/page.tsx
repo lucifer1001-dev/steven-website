@@ -6,7 +6,7 @@ import PageBackground from '@/components/PageBackground'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact Steven Chen, a Senior Software Engineer in Vancouver, WA, about AI-powered products, frontend architecture, and high-performance applications.',
+  description: 'Contact Steven Chen, a Senior Software Engineer in Vancouver, WA, about React architecture, production AI applications, frontend platforms, and performance.',
   alternates: { canonical: '/contact' },
 }
 

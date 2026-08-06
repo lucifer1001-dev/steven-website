@@ -1,21 +1,21 @@
 const roles = [
-  { company: 'Restb.ai', title: 'Senior Software Engineer', period: 'Feb 2023 - Present', location: 'Remote, US', detail: 'Frontend architecture for AI-powered search, chat, RAG retrieval, agent workflows, large image datasets, streaming UI, and observable production experiences.' },
-  { company: 'Canva', title: 'Senior Frontend Engineer', period: 'Aug 2020 - Jan 2023', location: 'Remote, US', detail: 'High-frequency editor interactions, real-time collaboration, GraphQL data fetching, shared state, and reusable components for a large-scale design system.' },
-  { company: 'Globant', title: 'Software Engineer', period: 'Mar 2017 - Jul 2020', location: 'San Francisco, CA', detail: 'React and TypeScript modernization, micro-frontends, analytics dashboards, component libraries, and supporting Node.js and Python services.' },
-  { company: 'Google', title: 'Software Engineer', period: 'Oct 2015 - Feb 2017', location: 'Mountain View, CA', detail: 'Internal telemetry, monitoring, high-volume data visualization, API integration, rendering optimization, and engineering debugging workflows.' },
+  { company: 'Restb.ai', title: 'Senior Software Engineer', period: 'Feb 2023 - Present', location: 'Remote, US', detail: 'Own frontend architecture for AI property intelligence: semantic search, embeddings, vector retrieval, RAG assistants, 100K+ image workflows, streaming UI, Node.js integrations, observability, releases, and mentorship.' },
+  { company: 'Canva', title: 'Senior Frontend Engineer', period: 'Aug 2020 - Jan 2023', location: 'Remote, US', detail: 'Advanced React editing experiences, reusable component systems, real-time feedback, GraphQL integration, performance optimization, and automated testing with Jest, React Testing Library, and Playwright.' },
+  { company: 'Globant', title: 'Software Engineer', period: 'Mar 2017 - Jul 2020', location: 'San Francisco, CA', detail: 'React and TypeScript modernization, shared UI frameworks, enterprise dashboards, RBAC workflows, REST integration, Node.js and Python services, testing, and accessibility standards.' },
+  { company: 'Google', title: 'Software Engineer', period: 'Oct 2015 - Feb 2017', location: 'Mountain View, CA', detail: 'React engineering dashboards, service-health and telemetry visualization, optimized client-side processing, reusable filtering patterns, and internal API integrations.' },
 ]
 
 const skillGroups = [
-  ['Frontend and architecture', 'React, Next.js, TypeScript, JavaScript, SPA, SSR, ISR, micro-frontends, component systems'],
-  ['AI and data systems', 'LLM-integrated UX, RAG search, chat interfaces, agent workflows, ML-driven UI, explainable AI'],
-  ['Data and performance', 'React Query, client-server state, Core Web Vitals, virtualization, progressive hydration, streaming UI'],
-  ['Tooling and observability', 'Sentry, Datadog, Webpack, Vite, Chrome DevTools'],
-  ['Backend and infrastructure', 'Node.js, Python, REST APIs, GraphQL, AWS, Docker, CI/CD, CDN and edge optimization'],
+  ['Frontend engineering', 'React, TypeScript, Next.js, React Query, Redux, Zustand, Tailwind CSS, Storybook, design systems, SSR, WCAG 2.1'],
+  ['Architecture and performance', 'Monorepos, design tokens, state architecture, visualization, virtualization, lazy loading, code splitting, Core Web Vitals, React Profiler'],
+  ['AI application engineering', 'OpenAI API, Anthropic Claude, RAG, semantic search, embeddings, vector search, AI assistants, streaming responses, agent workflows'],
+  ['Backend and cloud', 'Node.js, Express, NestJS, Python, FastAPI, REST, GraphQL, WebSockets, PostgreSQL, Redis, MongoDB, AWS, Docker, CI/CD'],
+  ['Testing and observability', 'Jest, React Testing Library, Playwright, Cypress, Sentry, Datadog, OpenTelemetry, production monitoring'],
 ]
 
 export default function Resume() {
   return <section className="page-section" aria-labelledby="resume-title"><div className="section-shell">
-    <div className="page-intro"><p className="eyebrow">Resume</p><h1 id="resume-title">Steven Chen</h1><p>Senior Software Engineer building high-performance, data-intensive AI and real-time applications at scale.</p></div>
+    <div className="page-intro"><p className="eyebrow">Resume</p><h1 id="resume-title">Steven Chen</h1><p>Senior Software Engineer architecting high-performance web applications, production AI products, and enterprise-scale software platforms.</p></div>
     <div className="mt-10 flex flex-wrap gap-3 text-sm text-slate-300"><a className="tech-pill hover:text-cyan-200" href="mailto:chenstevens890@gmail.com">chenstevens890@gmail.com</a><a className="tech-pill hover:text-cyan-200" href="tel:+13393991987">+1 (339) 399-1987</a><span className="tech-pill">Vancouver, WA</span><a className="tech-pill hover:text-cyan-200" href="https://stevenchen.life">stevenchen.life</a></div>
 
     <div className="mt-14 grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">

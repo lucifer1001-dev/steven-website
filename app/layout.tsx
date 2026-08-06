@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Steven Chen'
   },
   description:
-    'Steven Chen is a Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications, including AI-powered and real-time systems at scale.',
+    'Steven Chen is a Senior Software Engineer with 10+ years of experience architecting high-performance React applications, production AI products, and enterprise-scale software platforms.',
   keywords: [
     'Steven Chen',
     'Senior Frontend Engineer',
@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     'LLM Application Integration',
     'Semantic Search',
     'AI Assistants',
+    'Retrieval-Augmented Generation',
+    'Embeddings',
+    'Vector Search',
+    'OpenAI API',
+    'Anthropic Claude',
     'Real-time Systems'
   ],
   authors: [{ name: 'Steven Chen', url: SITE_URL }],
@@ -36,14 +41,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Software Engineer specializing in AI-driven user experiences, frontend architecture, and high-performance data-intensive applications.',
+      'Senior Software Engineer specializing in React architecture, production AI applications, semantic search, RAG workflows, and performance optimization.',
     siteName: 'Steven Chen Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Software Engineer specializing in AI-driven user experiences, frontend architecture, and high-performance data-intensive applications.',
+      'Senior Software Engineer specializing in React architecture, production AI applications, semantic search, RAG workflows, and performance optimization.',
   },
   robots: {
     index: true,
@@ -68,7 +73,7 @@ const jsonLd = {
   name: 'Steven Chen',
   jobTitle: 'Senior Software Engineer',
   description:
-    'Senior Software Engineer with 10+ years of experience building high-performance, data-intensive applications including AI-powered and real-time systems.',
+    'Senior Software Engineer with 10+ years of experience architecting high-performance web applications, production AI products, and enterprise software platforms.',
   knowsAbout: [
     'React',
     'TypeScript',
@@ -77,7 +82,10 @@ const jsonLd = {
     'Web Performance',
     'Real-time data synchronization',
     'Semantic search',
-    'AI product integration',
+    'Retrieval-Augmented Generation',
+    'Embeddings and vector search',
+    'OpenAI API and Anthropic Claude',
+    'AI assistants and agent workflows',
     'Performance engineering',
     'Distributed systems'
   ],

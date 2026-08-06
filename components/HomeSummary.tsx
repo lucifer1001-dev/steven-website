@@ -3,21 +3,21 @@ import Link from 'next/link'
 const projects = [
   {
     number: '01',
-    title: 'AI Search and Exploration Platform',
-    summary: 'Built natural-language search, RAG retrieval, and guided AI workflows for enterprise users exploring large-scale real estate image datasets.',
-    capabilities: ['React', 'TypeScript', 'RAG Search', 'Agent UX', 'Virtualization'],
+    title: 'AI Property Intelligence Platform',
+    summary: 'Architected customer-facing search, analytics, image analysis, and RAG assistant workflows across millions of property images and AI-generated metadata records.',
+    capabilities: ['React', 'TypeScript', 'RAG', 'Embeddings', 'Vector Search', 'Streaming UI'],
   },
   {
     number: '02',
-    title: 'Real-time Collaborative Editor',
-    summary: 'Improved high-frequency editing interactions, multi-user synchronization, shared state, and GraphQL data fetching for complex collaborative documents.',
-    capabilities: ['React', 'GraphQL', 'Real-time Collaboration', 'Design Systems'],
+    title: 'Collaborative Design Editing Platform',
+    summary: 'Developed advanced browser-based editing experiences, reusable UI frameworks, responsive interaction patterns, and real-time collaboration for millions of users.',
+    capabilities: ['React', 'TypeScript', 'GraphQL', 'Playwright', 'Design Systems'],
   },
   {
     number: '03',
-    title: 'Data-intensive Engineering Platforms',
-    summary: 'Modernized enterprise frontends and built analytics and telemetry interfaces that help teams understand high-volume operational data.',
-    capabilities: ['React', 'TypeScript', 'Micro-frontends', 'Data Visualization', 'APIs'],
+    title: 'Enterprise and Engineering Platforms',
+    summary: 'Modernized legacy enterprise applications and built operational dashboards that make large business and telemetry datasets useful through responsive interfaces.',
+    capabilities: ['React', 'TypeScript', 'Node.js', 'Data Visualization', 'REST APIs'],
   },
 ]
 

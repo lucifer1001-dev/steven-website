@@ -37,6 +37,9 @@ export default function Navigation() {
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const active = pathname === item.href
+            if (item.href.includes('#')) {
+              return <a key={item.href} href={item.href} className="nav-link">{item.label}</a>
+            }
             return <Link key={item.href} href={item.href} aria-current={active ? 'page' : undefined} className={`nav-link ${active ? 'nav-link-active' : ''}`}>{item.label}</Link>
           })}
         </div>
@@ -47,7 +50,7 @@ export default function Navigation() {
         </button>
       </nav>
 
-      {isOpen && <div id="mobile-navigation" className="section-shell border-t border-white/10 py-3 lg:hidden">{navItems.map((item) => <Link key={item.href} href={item.href} onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5">{item.label}</Link>)}</div>}
+      {isOpen && <div id="mobile-navigation" className="section-shell border-t border-white/10 py-3 lg:hidden">{navItems.map((item) => item.href.includes('#') ? <a key={item.href} href={item.href} onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5">{item.label}</a> : <Link key={item.href} href={item.href} onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-3 text-slate-200 hover:bg-white/5">{item.label}</Link>)}</div>}
     </header>
   )
 }
