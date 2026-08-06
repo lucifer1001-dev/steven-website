@@ -7,7 +7,7 @@ import PageBackground from '@/components/PageBackground'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Steven Chen, a Senior Software Engineer with 10+ years of experience in React architecture, production AI applications, frontend platforms, and performance optimization.',
+    'Learn about Steven Chen, a Senior Software Engineer with 10+ years of experience building scalable full-stack applications, AI-powered products, and enterprise platforms.',
   alternates: { canonical: '/about' },
 }
 

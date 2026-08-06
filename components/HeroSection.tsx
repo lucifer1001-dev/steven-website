@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const outcomes = [
   { value: '10+', label: 'years building at scale' },
@@ -8,22 +9,22 @@ const outcomes = [
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[92vh] items-center pt-24" aria-labelledby="hero-title">
-      <div className="section-shell grid items-center gap-14 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
+    <section className="relative min-h-screen pt-24" aria-labelledby="hero-title">
+      <div className="section-shell grid items-start gap-14 py-12 sm:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:py-20">
         <div>
           <div className="eyebrow mb-6">
             <span className="status-dot" aria-hidden="true" />
             Vancouver, WA · Senior Software Engineer
           </div>
 
-          <h1 id="hero-title" className="max-w-4xl text-5xl font-semibold tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
-            I build AI-powered and real-time products that stay fast at scale.
+          <h1 id="hero-title" className="max-w-4xl text-5xl font-medium leading-[1.02] tracking-[-0.05em] text-white sm:text-6xl lg:text-[4.75rem]">
+            I build full-stack products where performance and AI feel native.
           </h1>
 
           <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-            Senior Software Engineer specializing in React, TypeScript, Next.js, frontend architecture,
-            and production AI applications. I build scalable customer-facing products that combine
-            semantic search, RAG workflows, real-time interfaces, and high-performance data experiences.
+            Senior Software Engineer specializing in React, TypeScript, Node.js, Python, and cloud-native
+            architecture. I design scalable applications that combine polished user experiences,
+            reliable backend services, semantic search, RAG workflows, and data-intensive systems.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -46,23 +47,34 @@ export default function HeroSection() {
           </dl>
         </div>
 
-        <aside className="system-card" aria-label="Engineering profile">
-          <div className="flex items-center justify-between border-b border-white/10 pb-5">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">Engineering profile</p>
-              <p className="mt-1 text-sm text-slate-400">React Architecture · AI Applications · Performance</p>
+        <aside className="system-card !p-0" aria-label="Engineering profile">
+          <div className="p-6 sm:p-8">
+          <div className="grid grid-cols-[172px_1fr] items-center gap-6 border-b border-white/10 pb-6">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-white/10 bg-indigo-950/40">
+              <Image
+                src="/profile.png"
+                alt="Portrait of Steven Chen"
+                fill
+                priority
+                sizes="172px"
+                className="object-cover transition duration-700 ease-out hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-950/20 to-violet-400/[0.05]" />
             </div>
-            <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300">Available</span>
+            <div className="min-w-0">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-violet-300">Engineering profile</p>
+              <p className="mt-2 text-sm leading-6 text-slate-300">Full-stack products, applied AI, and performance engineering.</p>
+              <span className="mt-3 inline-flex rounded-full border border-violet-300/20 bg-violet-300/[0.08] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-violet-200">10+ years</span>
+            </div>
           </div>
 
-          <div className="space-y-7 py-7">
-            <ProfileRow index="01" title="AI application engineering" description="AI assistants, semantic search, embeddings, vector retrieval, streaming responses, and agent workflows." />
-            <ProfileRow index="02" title="Frontend platforms" description="Scalable React architecture, design systems, state management, accessibility, and large dataset visualization." />
-            <ProfileRow index="03" title="Engineering leadership" description="Architecture ownership, standards, mentoring, production operations, observability, and cross-team delivery." />
+          <div className="space-y-5 py-6">
+            <ProfileRow index="01" title="Product architecture" description="Scalable React frontends, Node.js and Python services, APIs, state architecture, and cloud integrations." />
+            <ProfileRow index="02" title="Applied AI" description="LLM integrations, RAG, semantic retrieval, vector search, streaming responses, and intelligent discovery." />
+            <ProfileRow index="03" title="Production ownership" description="System design, performance, testing, observability, delivery, and cross-functional engineering leadership." />
           </div>
 
-          <div className="flex flex-wrap gap-2 border-t border-white/10 pt-5">
-            {['React', 'TypeScript', 'Next.js', 'React Query', 'RAG', 'OpenAI API', 'Node.js', 'AWS'].map((skill) => <span key={skill} className="tech-pill">{skill}</span>)}
+          <p className="tech-line border-t border-white/10 pt-5">React / TypeScript / Next.js / Node.js / Python / GraphQL / RAG / AWS</p>
           </div>
         </aside>
       </div>
@@ -71,5 +83,5 @@ export default function HeroSection() {
 }
 
 function ProfileRow({ index, title, description }: { index: string; title: string; description: string }) {
-  return <div className="grid grid-cols-[auto_1fr] gap-4"><span className="font-mono text-xs text-cyan-400/70">{index}</span><div><h2 className="font-semibold text-white">{title}</h2><p className="mt-1 text-sm leading-6 text-slate-400">{description}</p></div></div>
+  return <div className="grid grid-cols-[auto_1fr] gap-4"><span className="font-mono text-xs text-violet-300">{index}</span><div><h2 className="font-semibold text-white">{title}</h2><p className="mt-1 text-sm leading-6 text-slate-400">{description}</p></div></div>
 }
