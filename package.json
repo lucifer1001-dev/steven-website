@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "test": "tsc --noEmit",
-    "dev": "next dev --webpack",
+    "dev": "node api.js && next dev --webpack",
     "build": "next build",
-    "start": "next start",
+    "start": "node api.js && next start",
     "lint": "eslint ."
   },
   "dependencies": {

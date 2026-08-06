@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Steven Chen'
   },
   description:
-    'Steven Chen is a Senior Software Engineer with 10+ years of experience architecting high-performance React applications, production AI products, and enterprise-scale software platforms.',
+    'Steven Chen is a Senior Software Engineer with 10+ years of experience building scalable full-stack applications, AI-powered products, and enterprise software platforms.',
   keywords: [
     'Steven Chen',
     'Senior Frontend Engineer',
@@ -28,8 +28,9 @@ export const metadata: Metadata = {
     'Retrieval-Augmented Generation',
     'Embeddings',
     'Vector Search',
-    'OpenAI API',
-    'Anthropic Claude',
+    'Node.js',
+    'Python',
+    'Cloud Architecture',
     'Real-time Systems'
   ],
   authors: [{ name: 'Steven Chen', url: SITE_URL }],
@@ -41,14 +42,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Software Engineer specializing in React architecture, production AI applications, semantic search, RAG workflows, and performance optimization.',
+      'Senior Software Engineer specializing in React, TypeScript, Node.js, Python, AI-powered products, and cloud-native architecture.',
     siteName: 'Steven Chen Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Steven Chen | Senior Software Engineer',
     description:
-      'Senior Software Engineer specializing in React architecture, production AI applications, semantic search, RAG workflows, and performance optimization.',
+      'Senior Software Engineer specializing in React, TypeScript, Node.js, Python, AI-powered products, and cloud-native architecture.',
   },
   robots: {
     index: true,
@@ -73,7 +74,7 @@ const jsonLd = {
   name: 'Steven Chen',
   jobTitle: 'Senior Software Engineer',
   description:
-    'Senior Software Engineer with 10+ years of experience architecting high-performance web applications, production AI products, and enterprise software platforms.',
+    'Senior Software Engineer with 10+ years of experience building scalable full-stack applications, AI-powered products, and enterprise software platforms.',
   knowsAbout: [
     'React',
     'TypeScript',
@@ -84,7 +85,8 @@ const jsonLd = {
     'Semantic search',
     'Retrieval-Augmented Generation',
     'Embeddings and vector search',
-    'OpenAI API and Anthropic Claude',
+    'Node.js and Python services',
+    'Cloud-native architecture',
     'AI assistants and agent workflows',
     'Performance engineering',
     'Distributed systems'
@@ -120,7 +122,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <a href="#main-content" className="sr-only z-[100] rounded bg-cyan-200 px-4 py-2 text-slate-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+        <a href="#main-content" className="sr-only z-[100] rounded-lg bg-violet-400 px-4 py-2 text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
         {children}
       </body>
     </html>
